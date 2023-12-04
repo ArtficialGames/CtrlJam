@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 150
-  maxSpeed: 2000
+  maxSpeed: 2500
   distanceFromTarget: 1
   rb: {fileID: 5081802943518347073}
   queue: {fileID: 0}

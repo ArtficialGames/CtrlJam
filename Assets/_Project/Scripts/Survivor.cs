@@ -30,9 +30,6 @@ public abstract class Survivor : MonoBehaviour
         }
         else
             rb.velocity = Vector2.zero;
-
-        if (gameObject.CompareTag("Leader"))
-            print(currentSpeed);
     }
 
     float GetDistanceFromCursor()

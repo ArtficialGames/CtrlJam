@@ -1,45 +1,72 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Snake : MonoBehaviour
 {
     [SerializeField] float speed;
+    [SerializeField] float nextWaypointDistance = 2f;
+    [SerializeField] Transform target;
 
     Rigidbody2D rb;
-    Transform target;
+
+    Path path;
+    int currentWaypoint = 0;
+    bool reachedEndOfPath;
+    Seeker seeker;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        seeker = GetComponent<Seeker>();
+
+        InvokeRepeating("UpdatePath", 0f, 0.5f);
     }
 
-    private void Start()
+    void OnPathComplete(Path p)
+    {
+        if (!p.error)
+        {
+            path = p;
+            currentWaypoint = 0;
+        }
+    }
+
+    void UpdatePath()
     {
         target = GetTarget();
+        seeker.StartPath(rb.position, target.position, OnPathComplete);
     }
 
     void FixedUpdate()
     {
-        Follow(target);
-    }
+        //Follow(target);
 
-    protected void Follow(Transform target)
-    {
-        target.position = new Vector3(target.position.x, target.position.y, 0);
+        if (path == null)
+            return;
 
-        Vector3 diff = target.position - transform.position;
-        diff.Normalize();
-
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z);
-
-        if (Vector3.Distance(transform.position, target.position) > 1f)
+        if(currentWaypoint >= path.vectorPath.Count)
         {
-            rb.velocity = transform.right * speed * Time.fixedDeltaTime;
+            reachedEndOfPath = true;
+            return;
         }
         else
-            rb.velocity = Vector2.zero;
+        {
+            reachedEndOfPath = false;
+        }
+
+        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+        Vector2 force = direction * speed * Time.fixedDeltaTime;
+
+        rb.AddForce(force);
+
+        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+        if(distance < nextWaypointDistance)
+        {
+            currentWaypoint++;
+        }
     }
 
     Transform GetTarget()

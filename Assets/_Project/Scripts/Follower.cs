@@ -8,6 +8,7 @@ public class Follower : Survivor
 
     StateMachine stateMachine;
     Collider2D col;
+    public bool isSafe;
 
     private void Awake()
     {
@@ -71,6 +72,8 @@ public class Follower : Survivor
 
         if (Vector3.Distance(transform.position, target.position) > distanceFromTarget * distanceLimit)
             QueueOut();
+
+        GetComponent<SpriteRenderer>().color = isSafe ? Color.green : Color.red;
     }
 
     void EnterDeadState()

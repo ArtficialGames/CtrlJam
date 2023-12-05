@@ -18,9 +18,16 @@ public class Leader : Survivor
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Follower") && collision.GetComponent<StateMachine>().GetCurrentStateName() == "LOST")
+        if (collision.CompareTag("Follower") && collision.GetComponent<StateMachine>().GetCurrentStateName() == "UNPICKED" || collision.CompareTag("Follower") && collision.GetComponent<StateMachine>().GetCurrentStateName() == "LOST")
         {
             collision.GetComponent<Follower>().QueueIn(this);
         }
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        GameController.Instance.GameOver();
+        Destroy(gameObject);
     }
 }

@@ -14,10 +14,12 @@ public class Follower : Survivor
         stateMachine = GetComponent<StateMachine>();
         col = GetComponent<Collider2D>();
 
-        State lostState = new State("LOST", EnterLostState, null, null);
+        State unpickedState = new State("UNPICKED", EnterLostState, null, null);
         State followState = new State("FOLLOW", EnterFollowState, WhileInFollowState, null);
+        State lostState = new State("LOST", EnterLostState, null, null);
+        State deadState = new State("DEAD", EnterDeadState, null, null);
 
-        State[] initialStates = { lostState, followState };
+        State[] initialStates = { unpickedState, lostState, followState, deadState };
 
         stateMachine.Init(initialStates);
 
@@ -39,7 +41,6 @@ public class Follower : Survivor
 
         foreach (var survivor in survivorsBehind)
         {
-            print(survivor.name);
             survivor.GetComponent<StateMachine>().GoToState("LOST");
         }
 
@@ -70,5 +71,17 @@ public class Follower : Survivor
 
         if (Vector3.Distance(transform.position, target.position) > distanceFromTarget * distanceLimit)
             QueueOut();
+    }
+
+    void EnterDeadState()
+    {
+        queue?.Remove(this);
+        Destroy(gameObject);
+    }
+
+    public override void Die()
+    {
+        base.Die();
+        stateMachine.GoToState("DEAD");
     }
 }

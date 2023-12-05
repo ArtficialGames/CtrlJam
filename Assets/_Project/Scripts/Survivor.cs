@@ -36,4 +36,9 @@ public abstract class Survivor : MonoBehaviour
     {
         return Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
+
+    public virtual void Die()
+    {
+
+    }
 }

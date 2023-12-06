@@ -40,11 +40,6 @@ public class Snake : MonoBehaviour
         stateMachine.Init(initialStates);
     }
 
-    private void Update()
-    {
-        print(stateMachine.GetCurrentStateName());
-    }
-
     void UpdateWanderingPath()
     {
         seeker.StartPath(rb.position, wanderPos, OnPathComplete);

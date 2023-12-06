@@ -5,7 +5,10 @@ using Pathfinding;
 
 public class Snake : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] int health;
+    [SerializeField] float wanderSpeed;
+    [SerializeField] float chaseSpeed;
+    [SerializeField] float afterDamageSpeed;
     [SerializeField] float attackDuration;
     [SerializeField] float nextWaypointDistance = 2f;
 
@@ -14,8 +17,11 @@ public class Snake : MonoBehaviour
     bool canAttack = true;
     Transform target;
     Vector2 wanderPos;
+    Vector2 afterDamagePos;
     Leader leader;
     StateMachine stateMachine;
+    float currentSpeed;
+    int maxHealth;
 
     Path path;
     int currentWaypoint = 0;
@@ -34,10 +40,13 @@ public class Snake : MonoBehaviour
         State wanderState = new State("WANDER", EnterWanderState, WhileInWanderState, ExitWanderState);
         State chaseState = new State("CHASE", EnterChaseState, WhileInChaseState, ExitChaseState);
         State attackState = new State("ATTACK", null, null, null);
+        State damageState = new State("DAMAGE", EnterDamageState, WhileInDamageState, null);
 
-        State[] initialStates = { wanderState, chaseState, attackState };
+        State[] initialStates = { wanderState, chaseState, attackState, damageState };
 
         stateMachine.Init(initialStates);
+
+        maxHealth = health;
     }
 
     void UpdateWanderingPath()
@@ -53,6 +62,11 @@ public class Snake : MonoBehaviour
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         else
             stateMachine.GoToState("WANDER");
+    }
+
+    void UpdateDamagedPath()
+    {
+        seeker.StartPath(rb.position, afterDamagePos, OnPathComplete);
     }
 
     void OnPathComplete(Path p)
@@ -80,7 +94,7 @@ public class Snake : MonoBehaviour
         }
 
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.fixedDeltaTime;
+        Vector2 force = direction * currentSpeed * Time.fixedDeltaTime;
 
         rb.AddForce(force);
 
@@ -136,13 +150,24 @@ public class Snake : MonoBehaviour
 
         return pos;
     }
+    Vector2 GetPosAfterDamage()
+    {
+        Vector2 pos = new Vector2();
+
+        if (leader.transform.position.y > 0f)
+            pos = new Vector2(0f, 20f);
+        else
+            pos = new Vector2(0f, -20f);
+
+        return pos;
+    }
 
     void Attack(GameObject attackTarget)
     {
         if (attackTarget == null)
             return;
 
-        if (!canAttack || attackTarget != target.root.gameObject)
+        if (!canAttack || target != null && attackTarget != target.root.gameObject)
             return;
 
         isAttacking = true;
@@ -168,6 +193,7 @@ public class Snake : MonoBehaviour
     void EnterWanderState()
     {
         wanderPos = GetWanderingPos();
+        currentSpeed = wanderSpeed;
         InvokeRepeating("UpdateWanderingPath", 0f, 0.5f);
     }
 
@@ -189,6 +215,7 @@ public class Snake : MonoBehaviour
 
     void EnterChaseState()
     {
+        currentSpeed = chaseSpeed;
         InvokeRepeating("UpdateChasingPath", 0f, 0.5f);
     }
 
@@ -202,5 +229,55 @@ public class Snake : MonoBehaviour
     void ExitChaseState()
     {
         CancelInvoke();
+    }
+
+    void EnterDamageState()
+    {
+        rb.velocity = Vector2.zero;
+        currentSpeed = afterDamageSpeed;
+        afterDamagePos = GetPosAfterDamage();
+        StartCoroutine(DamageAnim());
+        InvokeRepeating("UpdateDamagedPath", 0f, 0.5f);
+    }
+
+    void WhileInDamageState()
+    {
+        PerformPath();
+
+        if (Vector2.Distance(transform.position, afterDamagePos) < 2f)
+            stateMachine.GoToState("WANDER");
+    }
+
+    void ExitDamageState()
+    {
+        CancelInvoke();
+    }
+
+    IEnumerator DamageAnim()
+    {
+        for (int i = 0; i < 1f / 0.3f; i++)
+        {
+            transform.root.GetComponent<SpriteRenderer>().color = Color.red;
+            yield return new WaitForSeconds(0.15f);
+            transform.root.GetComponent<SpriteRenderer>().color = Color.white;
+            yield return new WaitForSeconds(0.15f);
+        }
+
+        transform.root.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        stateMachine.GoToState("DAMAGE");
+
+        if (health <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        Destroy(gameObject.transform.root.gameObject);
     }
 }

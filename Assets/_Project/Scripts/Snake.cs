@@ -152,9 +152,9 @@ public class Snake : MonoBehaviour
     }
     Vector2 GetPosAfterDamage()
     {
-        Vector2 pos = new Vector2();
+        Vector2 pos = new Vector2(0f, 20f);
 
-        if (leader.transform.position.y > 0f)
+        if (leader.transform.position.y < 0f)
             pos = new Vector2(0f, 20f);
         else
             pos = new Vector2(0f, -20f);

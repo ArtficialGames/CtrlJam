@@ -27,6 +27,11 @@ public class Leader : Survivor
             Follow(followTarget);
     }
 
+    private void Update()
+    {
+        HandleAnimation();
+    }
+
     void Attack(GameObject target)
     {
         if (target.GetComponentInChildren<Snake>().GetComponent<StateMachine>().GetCurrentStateName() == "DAMAGE")
@@ -50,5 +55,11 @@ public class Leader : Survivor
         base.Die();
         GameController.Instance.GameOver();
         Destroy(gameObject);
+    }
+
+    void HandleAnimation()
+    {
+        animator.SetFloat("Speed", rb.velocity.magnitude);
+        spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
     }
 }

@@ -23,7 +23,6 @@ public class Follower : Survivor
         State[] initialStates = { unpickedState, lostState, followState, deadState };
 
         stateMachine.Init(initialStates);
-
     }
 
     public void QueueIn(Leader leader)
@@ -89,5 +88,18 @@ public class Follower : Survivor
     {
         base.Die();
         stateMachine.GoToState("DEAD");
+    }
+
+    private void Update()
+    {
+        HandAnimation();
+    }
+
+    void HandAnimation()
+    {
+        animator.SetFloat("Speed", rb.velocity.magnitude);
+
+        if(queue != null)
+            spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
     }
 }

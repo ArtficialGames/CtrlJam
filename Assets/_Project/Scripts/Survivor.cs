@@ -8,6 +8,8 @@ public abstract class Survivor : MonoBehaviour
     [SerializeField] float maxSpeed;
     [SerializeField] protected float distanceFromTarget;
     [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected Animator animator;
+    [SerializeField] protected SpriteRenderer spriteRenderer;
     [HideInInspector] public Queue queue;
     protected Transform target;
 
@@ -18,15 +20,15 @@ public abstract class Survivor : MonoBehaviour
         Vector3 diff = target.position - transform.position;
         diff.Normalize();
 
-        float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        /*float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);*/
 
         float currentSpeed = speed * GetDistanceFromCursor() < maxSpeed ? speed * GetDistanceFromCursor() : maxSpeed;
 
         if (Vector3.Distance(transform.position, target.position) > distanceFromTarget)
         {
             //rb.velocity = transform.up * currentSpeed * Time.fixedDeltaTime;
-            rb.AddForce(transform.up * currentSpeed * Time.fixedDeltaTime);
+            rb.AddForce(diff * currentSpeed * Time.fixedDeltaTime);
         }
         else
             rb.velocity = Vector2.zero;

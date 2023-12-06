@@ -34,7 +34,12 @@ public class Boost : MonoBehaviour
 
     IEnumerator BoostCoroutine()
     {
+        target.queue.undetachable = true;
         yield return new WaitForSeconds(duration);
+
+        if(target)
+            target.queue.undetachable = false;
+
         target = null;
     }
 

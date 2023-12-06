@@ -37,6 +37,9 @@ public class Follower : Survivor
 
     public void QueueOut()
     {
+        if (queue.undetachable)
+            return;
+
         List<Survivor> survivorsBehind = queue.GetSurvivorsBehind(this);
         survivorsBehind.Reverse();
 

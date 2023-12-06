@@ -362,8 +362,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0a1a5e5223d8d4281f746de40dbe64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
-  duration: 0.25
+  speed: 100
+  duration: 0.5
 --- !u!61 &301239865
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -470,8 +470,8 @@ Transform:
   m_GameObject: {fileID: 301239863}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.217609, y: 4.5296326, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 7.2176094, y: 6.5296326, z: 0}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -735,6 +735,7 @@ GameObject:
   - component: {fileID: 801746255}
   - component: {fileID: 801746258}
   - component: {fileID: 801746259}
+  - component: {fileID: 801746260}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -785,7 +786,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12
+  orthographic size: 13.65625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -894,6 +895,30 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &801746260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 801746254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_AssetsPPU: 16
+  m_RefResolutionX: 480
+  m_RefResolutionY: 270
+  m_CropFrame: 0
+  m_GridSnapping: 0
+  m_FilterMode: 0
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!1 &843100913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 952196523}
   - component: {fileID: 952196522}
+  - component: {fileID: 952196524}
   m_Layer: 0
   m_Name: Virtual Camera
   m_TagString: Untagged
@@ -1086,6 +1112,18 @@ Transform:
   - {fileID: 47545771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &952196524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 952196521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a8a05de0ac134f4f9d01bef6b9da077, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &996622401
 PrefabInstance:
   m_ObjectHideFlags: 0

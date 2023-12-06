@@ -106,7 +106,8 @@ MonoBehaviour:
   distanceFromTarget: 1
   rb: {fileID: 5081802943518347073}
   queue: {fileID: 0}
-  distanceLimit: 3
+  distanceLimit: 5
+  isSafe: 0
 --- !u!50 &5081802943518347073
 Rigidbody2D:
   serializedVersion: 4

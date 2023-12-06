@@ -5,6 +5,7 @@ using UnityEngine;
 public class Queue : MonoBehaviour
 {
     public List<Survivor> survivors;
+    public bool undetachable;
 
     public Survivor GetNextInLine(Survivor survivor)
     {

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Queue : MonoBehaviour
 {
+    [SerializeField] LineRenderer lineRenderer;
+    [SerializeField] GameObject line;
+
     public List<Survivor> survivors;
     public bool undetachable;
     public int maxSurvivors = 8;
@@ -11,6 +14,7 @@ public class Queue : MonoBehaviour
     private void Awake()
     {
         GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
+        lineRenderer = Instantiate(line, Vector3.zero, Quaternion.identity).GetComponent<LineRenderer>();
     }
 
     public Survivor GetNextInLine(Survivor survivor)
@@ -45,5 +49,20 @@ public class Queue : MonoBehaviour
     {
         survivors.Remove(survivor);
         GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
+    }
+
+    private void Update()
+    {
+        UpdateLine();
+    }
+
+    void UpdateLine()
+    {
+        lineRenderer.positionCount = survivors.Count;
+
+        for (int i = 0; i < survivors.Count; i++)
+        {
+            lineRenderer.SetPosition(i, survivors[i].transform.position + Vector3.up * 0.5f);
+        }
     }
 }

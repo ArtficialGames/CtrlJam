@@ -103,8 +103,12 @@ public class Follower : Survivor
     void HandAnimation()
     {
         animator.SetFloat("Speed", rb.velocity.magnitude);
+        animator.SetBool("Crying", stateMachine.GetCurrentStateName() == "UNPICKED" || stateMachine.GetCurrentStateName() == "LOST");
 
-        if(queue != null)
-            spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
+        if (queue != null)
+        {
+            //spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
+            spriteRenderer.flipX = rb.velocity.x < 0;
+        }
     }
 }

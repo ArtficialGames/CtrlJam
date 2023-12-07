@@ -23,12 +23,12 @@ public class StartMenuController : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(1);
     }
 
     public void Credits()
     {
-        SceneManager.LoadScene("Credits");
+        //SceneManager.LoadScene("Credits");
     }
 
     public void Exit()

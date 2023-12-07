@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 11500000, guid: 1eeb0365dec1ee545b2af37cd3888046, type: 3}
   m_Name: Tilemap_1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 1660673568, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}
@@ -34,3 +34,9 @@ MonoBehaviour:
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
   m_ColliderType: 1
+  lightSprite:
+  - {fileID: -2017595148, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}
+  - {fileID: -201577540, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}
+  - {fileID: -1554243939, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}
+  - {fileID: 353281179, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}
+  - {fileID: 1660673568, guid: b0904b18b35f7f34998ab7b2bbc1cf72, type: 3}

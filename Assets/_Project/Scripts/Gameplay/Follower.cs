@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Follower : Survivor
 {
@@ -27,6 +28,9 @@ public class Follower : Survivor
 
     public void QueueIn(Leader leader)
     {
+        if (leader.queue.survivors.Count - 1 >= leader.queue.maxSurvivors)
+            return;
+
         queue = leader.GetComponent<Queue>();
         queue.Add(this);
         target = queue.GetNextInLine(this).transform;
@@ -87,6 +91,7 @@ public class Follower : Survivor
     public override void Die()
     {
         base.Die();
+        GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().PlayHUDAnimation();
         stateMachine.GoToState("DEAD");
     }
 

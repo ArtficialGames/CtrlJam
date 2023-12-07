@@ -8,6 +8,7 @@ TagManager:
   - Follower
   - WeakSpot
   - LightSource
+  - HUD
   layers:
   - Default
   - TransparentFX
@@ -18,8 +19,8 @@ TagManager:
   - Obstacle
   - Snake
   - Light
-  - 
-  - 
+  - Follower
+  - Leader
   - 
   - 
   - 

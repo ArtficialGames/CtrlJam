@@ -6,6 +6,7 @@ public class Leader : Survivor
 {
     [SerializeField] Transform followTarget;
     StateMachine stateMachine;
+    public HUD hud;
 
     private void Awake()
     {

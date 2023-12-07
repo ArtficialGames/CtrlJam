@@ -6,6 +6,12 @@ public class Queue : MonoBehaviour
 {
     public List<Survivor> survivors;
     public bool undetachable;
+    public int maxSurvivors = 8;
+
+    private void Awake()
+    {
+        GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
+    }
 
     public Survivor GetNextInLine(Survivor survivor)
     {
@@ -32,11 +38,12 @@ public class Queue : MonoBehaviour
     public void Add(Survivor survivor)
     {
         survivors.Add(survivor);
+        GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
     }
 
     public void Remove(Survivor survivor)
     {
         survivors.Remove(survivor);
-        //survivors.RemoveRange(survivors.IndexOf(survivor), survivors.Count - 1);
+        GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
     }
 }

@@ -41,6 +41,5 @@ public abstract class Survivor : MonoBehaviour
 
     public virtual void Die()
     {
-
     }
 }

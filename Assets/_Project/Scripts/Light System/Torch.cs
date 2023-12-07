@@ -16,7 +16,7 @@ public class Torch : LightSource
 
     private void Awake()
     {
-        leader = GetComponent<Leader>();
+        leader = transform.root.GetComponent<Leader>();
         maxTorchLightRadius = range;
     }
 
@@ -25,6 +25,7 @@ public class Torch : LightSource
         if(range > 0)
         {
             range -= decaySpeed * Time.deltaTime;
+            leader.hud.UpdateTorchAmount(Mathf.CeilToInt(range / maxTorchLightRadius * 100f));
         }
 
         col.radius = range;

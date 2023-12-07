@@ -305,7 +305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1748374837954023977
 Transform:
   m_ObjectHideFlags: 0
@@ -489,6 +489,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 645203754794993754}
   queue: {fileID: 0}
   followTarget: {fileID: 0}
+  hud: {fileID: 0}
 --- !u!114 &784791105591670846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,6 +505,7 @@ MonoBehaviour:
   survivors:
   - {fileID: 4574663664076008658}
   undetachable: 0
+  maxSurvivors: 8
 --- !u!114 &8200595293596886497
 MonoBehaviour:
   m_ObjectHideFlags: 0

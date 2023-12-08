@@ -38,11 +38,6 @@ public class PixelLighting : MonoBehaviour
             }
         }
 
-        foreach (var tilemap in tilemaps)
-        {
-            tilemap.RefreshTile(location);
-        }
-
         return lightLevel;
     }
 }

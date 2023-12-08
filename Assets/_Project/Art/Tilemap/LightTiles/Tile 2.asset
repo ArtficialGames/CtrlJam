@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1eeb0365dec1ee545b2af37cd3888046, type: 3}
   m_Name: Tile 2
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -389142865, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
+  m_Sprite: {fileID: -1151043233, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -35,8 +35,8 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 1
   lightSprite:
-  - {fileID: 1243604174, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
-  - {fileID: -865424226, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
-  - {fileID: 405386824, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
-  - {fileID: -105113270, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
-  - {fileID: -389142865, guid: f8ef1240d4992024f958ec051138ba53, type: 3}
+  - {fileID: -1015882903, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}
+  - {fileID: -1151043233, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}
+  - {fileID: -1151043233, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}
+  - {fileID: -1151043233, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}
+  - {fileID: -1151043233, guid: d8293b9f19b21fa47925142dbedcad56, type: 3}

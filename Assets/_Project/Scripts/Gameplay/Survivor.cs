@@ -25,7 +25,6 @@ public abstract class Survivor : MonoBehaviour
 
         float currentSpeed;
         currentSpeed = GetDistanceFromCursor() < maxCursorDistance ? speed * GetDistanceFromCursor() : speed * maxCursorDistance;
-        print(GetDistanceFromCursor());
 
         if (Vector3.Distance(transform.position, target.position) > distanceFromTarget)
         {

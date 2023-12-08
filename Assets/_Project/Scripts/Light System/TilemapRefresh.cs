@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TilemapRefresh : MonoBehaviour
 {
-    /*private Tilemap tilemap;
+    private Tilemap tilemap;
 
     void Start()
     {
@@ -20,5 +20,5 @@ public class TilemapRefresh : MonoBehaviour
         {
             tilemap.RefreshAllTiles();
         }
-    }*/
+    }
 }

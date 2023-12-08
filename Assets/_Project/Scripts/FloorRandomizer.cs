@@ -14,6 +14,7 @@ public class FloorRandomizer : MonoBehaviour
         foreach (var tile in tilemap.cellBounds.allPositionsWithin)
         {
             tilemap.SetTile(tile, tiles[Random.Range(0, tiles.Length)]);
+            //print(tile.ToString());
         }
     }
 }

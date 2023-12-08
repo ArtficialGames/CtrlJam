@@ -187,8 +187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fa09caa6d981484a84ba5132a16771b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 150
-  maxSpeed: 2500
+  speed: 500
+  maxCursorDistance: 4
   distanceFromTarget: 1
   rb: {fileID: 5081802943518347073}
   animator: {fileID: 6113261472233438408}
@@ -209,7 +209,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 4
+  m_LinearDrag: 4.3
   m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}

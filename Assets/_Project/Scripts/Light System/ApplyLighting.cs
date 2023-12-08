@@ -21,8 +21,7 @@ public class ApplyLighting : MonoBehaviour
         if (PixelLighting.Instance != null)
         {
             lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
-            print(lightLevel);
-            spriteRenderer.sprite = lightSprite[lightLevel - 1];
+            spriteRenderer.sprite = lightSprite[lightLevel];
         }
     }
 }

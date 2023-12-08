@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5514288254661764488}
   - component: {fileID: 4965847679473278572}
   - component: {fileID: 6113261472233438408}
+  - component: {fileID: 6202515081018911062}
   m_Layer: 0
   m_Name: Follower
   m_TagString: Follower
@@ -336,3 +337,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6202515081018911062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4469208340523543027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5905d2d28997d4eb0037842d29fbe9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 3816990258077994140}
+  normal: {fileID: 9100000, guid: b1fb5ead7a7b43d4182b0d9e8958ac59, type: 2}
+  lowLight: {fileID: 22100000, guid: 5ec9741aa18430a4f8835e7266eca6ed, type: 2}

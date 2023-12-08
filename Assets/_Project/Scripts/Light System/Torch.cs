@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
 public class Torch : LightSource
 {
     [SerializeField] float decaySpeed;
+    [SerializeField] float minRange;
     [SerializeField] Light2D torchLight;
     [SerializeField] CircleCollider2D col;
     [SerializeField] SpriteRenderer spriteRenderer;
+
+    [SerializeField] Animator animator;
+    [SerializeField] AnimatorController withTorch;
+    [SerializeField] AnimatorOverrideController noTorch;
 
     Leader leader;
     float maxTorchLightRadius;
@@ -22,17 +28,19 @@ public class Torch : LightSource
 
     private void Update()
     {
-        if(range > 0)
+        if(range > minRange)
         {
+            animator.runtimeAnimatorController = withTorch;
             range -= decaySpeed * Time.deltaTime;
-            leader.hud.UpdateTorchAmount(Mathf.CeilToInt(range / maxTorchLightRadius * 100f));
+            leader.hud.UpdateTorchAmount(Mathf.CeilToInt((range - minRange) / (maxTorchLightRadius - minRange) * 100f));
         }
+        else
+            animator.runtimeAnimatorController = noTorch;
 
         col.radius = range;
         torchLight.pointLightInnerRadius = range;
         torchLight.pointLightOuterRadius = range;
         spriteRenderer.transform.parent.localScale = new Vector3(range, range, range);
-
     }
 
     private void OnTriggerStay2D(Collider2D collision)

@@ -3,7 +3,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-    [SerializeField] AudioSource musicSource;
+    public AudioSource musicSource;
     float musicVolume = 0.5f;
     float sfxVolume = 0.5f;
 
@@ -11,7 +11,13 @@ public class AudioManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            if(this.musicSource.clip == Instance.musicSource.clip)
+                Destroy(gameObject);
+            else
+            {
+                Destroy(Instance.gameObject);
+                Instance = this;
+            }
         }
         else
         {

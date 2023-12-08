@@ -140,7 +140,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -161,7 +161,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -182,7 +182,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -203,7 +203,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 96
-        y: 96
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -223,8 +223,8 @@ TextureImporter:
       name: Follower_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
+        x: 128
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -244,8 +244,8 @@ TextureImporter:
       name: Follower_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 64
+        x: 160
+        y: 160
         width: 32
         height: 32
       alignment: 0
@@ -265,8 +265,8 @@ TextureImporter:
       name: Follower_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
+        x: 0
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -286,8 +286,8 @@ TextureImporter:
       name: Follower_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
+        x: 32
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -307,8 +307,8 @@ TextureImporter:
       name: Follower_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 32
+        x: 64
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -328,8 +328,8 @@ TextureImporter:
       name: Follower_9
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
+        x: 96
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -349,8 +349,8 @@ TextureImporter:
       name: Follower_10
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
+        x: 128
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -370,8 +370,8 @@ TextureImporter:
       name: Follower_11
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 160
+        y: 128
         width: 32
         height: 32
       alignment: 0
@@ -392,7 +392,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -413,7 +413,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 32
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -434,7 +434,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 0
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -446,6 +446,363 @@ TextureImporter:
       bones: []
       spriteID: 6127a3e49b3b61c448a80a9bd3dc0fc3
       internalID: 610425550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_15
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63e505b26a1aae4ab2d90a218268588
+      internalID: -1502494835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_16
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15836f0947f6eeb448219cf5beb778d2
+      internalID: 913179382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5013a8bf6dc6044b9bcdd8cb00d42e
+      internalID: 1710880552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7ecb38bd0cc76748841690e62a13537
+      internalID: -1994972259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_19
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffa9faf8633f4634e98e9ddd13a90b36
+      internalID: -449343070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_20
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec371efccebd7334ca119da36f7255d2
+      internalID: -506825072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87799eb1ddb3df542a0ce916b0bb97f6
+      internalID: 1394391628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_22
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e7cecf7d1bdde4e97d9f9d5c053749
+      internalID: 131071919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_23
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2ceb20b3c9d064bb82b85423ee6ef7
+      internalID: -998605609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b09d06fac2852784fb3ec32626a0acb6
+      internalID: -1516828166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_25
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4ef2d76b986da4abbd7da74876abb0
+      internalID: -277396597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_26
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd0c169f3e901f48b2529a65b60b06e
+      internalID: 387327424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_27
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6e369d22000f64bb79f20728b5f8a0
+      internalID: -1442697503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bb6022bbca3bf045afac625b9a2a836
+      internalID: 160959701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_29
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a331081ca6f2a4f8547dc1a7349cd7
+      internalID: 427562175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95281179b080fe449b055258cebdb232
+      internalID: -518160465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Follower_31
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7279e69f2e190f747a9304bf6cf37ce9
+      internalID: 1188149180
       vertices: []
       indices: 
       edges: []
@@ -468,8 +825,25 @@ TextureImporter:
       Follower_12: -1969668416
       Follower_13: 2133114851
       Follower_14: 610425550
+      Follower_15: -1502494835
+      Follower_16: 913179382
+      Follower_17: 1710880552
+      Follower_18: -1994972259
+      Follower_19: -449343070
       Follower_2: 1496098765
+      Follower_20: -506825072
+      Follower_21: 1394391628
+      Follower_22: 131071919
+      Follower_23: -998605609
+      Follower_24: -1516828166
+      Follower_25: -277396597
+      Follower_26: 387327424
+      Follower_27: -1442697503
+      Follower_28: 160959701
+      Follower_29: 427562175
       Follower_3: -2102081610
+      Follower_30: -518160465
+      Follower_31: 1188149180
       Follower_4: 874739865
       Follower_5: 821679364
       Follower_6: -1290167733

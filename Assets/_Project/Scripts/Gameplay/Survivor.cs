@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class Survivor : MonoBehaviour
 {
     [SerializeField] float speed;
-    //[SerializeField] float maxSpeed;
+    [SerializeField] float maxCursorDistance = 5;
     [SerializeField] protected float distanceFromTarget;
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected Animator animator;
@@ -24,7 +24,8 @@ public abstract class Survivor : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);*/
 
         float currentSpeed;
-        currentSpeed = GetDistanceFromCursor() < 5f ? speed * GetDistanceFromCursor() : speed * 5f;
+        currentSpeed = GetDistanceFromCursor() < maxCursorDistance ? speed * GetDistanceFromCursor() : speed * maxCursorDistance;
+        print(GetDistanceFromCursor());
 
         if (Vector3.Distance(transform.position, target.position) > distanceFromTarget)
         {

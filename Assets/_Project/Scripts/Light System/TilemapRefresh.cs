@@ -11,7 +11,7 @@ public class TilemapRefresh : MonoBehaviour
         tilemap = GetComponent<Tilemap>();
         RefreshMap();
 
-        InvokeRepeating("RefreshMap", 0f, 0.15f);
+        InvokeRepeating("RefreshMap", 0f, 0.1f);
     }
 
     public void RefreshMap()

@@ -8,6 +8,7 @@ public class PixelLighting : MonoBehaviour
 {
     public static PixelLighting Instance;
     public List<LightSource> lightSources = new List<LightSource>();
+    public List<Tilemap> tilemaps;
 
     private void Awake()
     {
@@ -35,6 +36,11 @@ public class PixelLighting : MonoBehaviour
             {
                 lightLevel = Mathf.CeilToInt(light.range) - Mathf.CeilToInt(Vector3.Distance(location, light.transform.position));
             }
+        }
+
+        foreach (var tilemap in tilemaps)
+        {
+            tilemap.RefreshTile(location);
         }
 
         return lightLevel;

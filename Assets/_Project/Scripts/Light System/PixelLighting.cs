@@ -13,7 +13,8 @@ public class PixelLighting : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        InvokeRepeating("UpdateLightSources", 0f, 0.15f);
+        //InvokeRepeating("UpdateLightSources", 0f, 0.15f);
+        UpdateLightSources();
     }
 
     void UpdateLightSources()

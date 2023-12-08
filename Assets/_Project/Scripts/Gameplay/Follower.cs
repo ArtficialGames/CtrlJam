@@ -76,7 +76,7 @@ public class Follower : Survivor
     {
         Follow(target);
 
-        if (Vector3.Distance(transform.position, target.position) > distanceFromTarget * distanceLimit)
+        if (Vector3.Distance(transform.position, target.position) > distanceLimit)
             QueueOut();
 
         GetComponent<SpriteRenderer>().color = isSafe ? Color.green : Color.red;

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5779962849085703892}
   - component: {fileID: 4623676413844007816}
   - component: {fileID: 2285650838005425558}
+  - component: {fileID: 6215655901859942200}
+  - component: {fileID: 1381981508278563933}
   m_Layer: 0
   m_Name: Fuel
   m_TagString: Untagged
@@ -75,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: 9bb35b5d9e0b45f4aa6b5bc29a5927c0, type: 3}
-  m_Color: {r: 0.9150943, g: 0.2596678, b: 0, a: 1}
+  m_Sprite: {fileID: 191255366, guid: 9683c9027a2583d49b94bd8ed3ebbec7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -122,7 +124,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 2, y: 3}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -144,3 +146,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoverAmount: 5
+  sfx: {fileID: 8300000, guid: cb3171997c5d2b845b8fa762cac14b06, type: 3}
+--- !u!95 &6215655901859942200
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839148553568800948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5a99130d899109a4d86743ed231cd524, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1381981508278563933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839148553568800948}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e6a415b0a275844089c67699ac85b07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 1

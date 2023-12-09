@@ -196,6 +196,8 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3816990258077994140}
   queue: {fileID: 0}
   distanceLimit: 5
+  pickupSFX: {fileID: 8300000, guid: 7fe738b4415ddb14c86462d908c8eab0, type: 3}
+  breakSFX: {fileID: 8300000, guid: b57047147b93e0e41b32818f1874d3e9, type: 3}
   isSafe: 0
 --- !u!50 &5081802943518347073
 Rigidbody2D:

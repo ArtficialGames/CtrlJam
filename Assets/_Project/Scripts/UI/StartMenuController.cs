@@ -26,7 +26,7 @@ public class StartMenuController : MonoBehaviour
 
     public void Play()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("Game");
     }
 
     public void Credits()

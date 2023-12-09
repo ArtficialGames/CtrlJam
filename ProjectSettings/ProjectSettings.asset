@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Cisteto Senestro Corps
-  productName: SNAKESNACKS
+  productName: Torchkin
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.0627451, g: 0.06666667, b: 0.0627451, a: 1}

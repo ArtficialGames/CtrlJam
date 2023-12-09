@@ -16,8 +16,13 @@ public class Snake : MonoBehaviour
     [SerializeField] float distanceFromTargetMax;
     [SerializeField] Bounds mapSize;
 
+    [SerializeField] AudioClip attackSFX;
+    [SerializeField] AudioClip gameplayMusic;
+    [SerializeField] AudioClip chaseMusic;
+
     Rigidbody2D rb;
-    bool isAttacking;
+    public bool isAttacking;
+    public bool isMouthOpen;
     bool canAttack = true;
     Transform target;
     Vector2 wanderPos;
@@ -199,27 +204,41 @@ public class Snake : MonoBehaviour
 
     void Attack(GameObject attackTarget)
     {
+        if (stateMachine.GetCurrentStateName() == "DAMAGE")
+            return;
+
         if (attackTarget == null)
+            return;
+
+        if (attackTarget.GetComponent<Follower>() != null && attackTarget.GetComponent<Follower>().GetComponent<StateMachine>().GetCurrentStateName() == "UNPICKED")
+            return;
+
+        if (attackTarget.GetComponent<Follower>() != null && attackTarget.GetComponent<Follower>().queue != null && attackTarget.GetComponent<Survivor>() != attackTarget.GetComponent<Follower>().queue.survivors[attackTarget.GetComponent<Follower>().queue.survivors.Count - 1])
             return;
 
         if (!canAttack || target != null && attackTarget != target.root.gameObject)
             return;
 
         isAttacking = true;
+        isMouthOpen = true;
         attackTarget.GetComponent<Survivor>().Die();
         StartCoroutine(AttackCooldown());
         rb.velocity = Vector2.zero;
+        AudioManager.Instance.PlaySFX(attackSFX);
     }
 
     IEnumerator AttackCooldown()
     {
         canAttack = false;
 
-        SpriteRenderer spriteRenderer = GetComponentInChildren<AttackDetection>().GetComponent<SpriteRenderer>();
+        yield return new WaitForSeconds(0.15f);
+        isMouthOpen = false;
 
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
+        //SpriteRenderer spriteRenderer = GetComponentInChildren<AttackDetection>().GetComponent<SpriteRenderer>();
+
+        //spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1f);
         yield return new WaitForSeconds(attackDuration);
-        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
+        //spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 0f);
 
         canAttack = true;
         isAttacking = false;
@@ -252,6 +271,8 @@ public class Snake : MonoBehaviour
     {
         currentSpeed = chaseSpeed;
         InvokeRepeating("UpdateChasingPath", 0f, 0.5f);
+
+
     }
 
     void WhileInChaseState()
@@ -273,6 +294,7 @@ public class Snake : MonoBehaviour
         afterDamagePos = GetPosAfterDamage();
         StartCoroutine(DamageAnim());
         InvokeRepeating("UpdateDamagedPath", 0f, 0.5f);
+        AudioManager.Instance.ChangeMusicClip(gameplayMusic);
     }
 
     void WhileInDamageState()
@@ -331,11 +353,7 @@ public class Snake : MonoBehaviour
 
     void Die()
     {
+        GameController.Instance.Win();
         Destroy(gameObject.transform.root.gameObject);
-    }
-
-    private void Update()
-    {
-        print(stateMachine.GetCurrentStateName());
     }
 }

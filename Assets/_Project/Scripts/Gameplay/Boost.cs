@@ -6,6 +6,7 @@ public class Boost : MonoBehaviour
 {
     [SerializeField] float speed;
     [SerializeField] float duration;
+    [SerializeReference] AudioClip sfx;
 
     Leader target;
 
@@ -15,6 +16,7 @@ public class Boost : MonoBehaviour
         {
             target = collision.GetComponent<Leader>();
             StartCoroutine(BoostCoroutine());
+            AudioManager.Instance.PlaySFX(sfx);
         }
     }
 

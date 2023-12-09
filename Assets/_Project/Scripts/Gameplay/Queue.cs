@@ -9,10 +9,12 @@ public class Queue : MonoBehaviour
 
     public List<Survivor> survivors;
     public bool undetachable;
-    public int maxSurvivors = 8;
+    public int maxSurvivors;
 
     private void Awake()
     {
+        maxSurvivors = GameObject.FindGameObjectsWithTag("Follower").Length;
+
         GetComponent<Leader>().hud.UpdateSurvivorsCount(survivors.Count - 1, maxSurvivors);
         lineRenderer = Instantiate(line, Vector3.zero, Quaternion.identity).GetComponent<LineRenderer>();
     }

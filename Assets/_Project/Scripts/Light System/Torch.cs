@@ -71,9 +71,4 @@ public class Torch : LightSource
 
         col.radius = range;
     }
-
-    private void OnDisable()
-    {
-        PixelLighting.Instance.lightSources.Remove(this);
-    }
 }

@@ -35,7 +35,7 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 1
   lightSprite:
-  - {fileID: 792983478, guid: e78504bf912f99849bc45ab85ab16e8c, type: 3}
+  - {fileID: 0}
   - {fileID: -1558425565, guid: e78504bf912f99849bc45ab85ab16e8c, type: 3}
   - {fileID: -1226199216, guid: e78504bf912f99849bc45ab85ab16e8c, type: 3}
   - {fileID: 2087343524, guid: e78504bf912f99849bc45ab85ab16e8c, type: 3}

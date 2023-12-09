@@ -9,6 +9,7 @@ TagManager:
   - WeakSpot
   - LightSource
   - HUD
+  - SFX
   layers:
   - Default
   - TransparentFX

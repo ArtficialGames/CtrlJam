@@ -9,6 +9,9 @@ public class AudioManager : MonoBehaviour
     public float musicVolume;
     public float sfxVolume;
     public AudioSource musicAudioSource;
+    [SerializeField] AudioSource chaseAudioSource;
+
+    public bool isChase;
 
     private void Awake()
     {
@@ -75,7 +78,7 @@ public class AudioManager : MonoBehaviour
         tempGO.transform.position = Vector3.zero;
         AudioSource aSource = tempGO.AddComponent(typeof(AudioSource)) as AudioSource;
         aSource.clip = SFX;
-        aSource.volume = sfxVolume;
+        aSource.volume = sfxVolume * 0.65f;
         aSource.loop = loop;
 
         aSource.spatialBlend = 0f;
@@ -112,6 +115,44 @@ public class AudioManager : MonoBehaviour
         musicAudioSource.Stop();
         musicAudioSource.clip = newMusic;
         musicAudioSource.Play();
+    }
+
+    /*public void PlayChase()
+    {
+        chaseAudioSource.volume = PlayerPrefs.GetFloat("Music_Volume", 0.5f);
+        musicAudioSource.volume = 0;
+
+        //StartCoroutine(Fade(chaseAudioSource, musicAudioSource));
+
+        isChase = true;
+    }
+
+    public void PlayGameplay()
+    {
+        musicAudioSource.volume = PlayerPrefs.GetFloat("Music_Volume", 0.5f);
+        chaseAudioSource.volume = 0;
+
+        //StartCoroutine(Fade(musicAudioSource, chaseAudioSource));
+
+        isChase = false;
+    }*/
+
+    IEnumerator Fade(AudioSource on, AudioSource off)
+    {
+        float currentTime = 0;
+        float duration = 0.5f;
+
+        float start = on.volume;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            on.volume = Mathf.Lerp(start, PlayerPrefs.GetFloat("Music_Volume"), currentTime / duration);
+            off.volume = Mathf.Lerp(start, 0, currentTime / duration);
+
+            yield return null;
+        }
+
+        yield break;
     }
 
     public AudioClip GetCurrentMusic()

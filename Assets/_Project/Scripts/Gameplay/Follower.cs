@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
 
 public class Follower : Survivor
 {
     [SerializeField] float distanceLimit;
+    [SerializeField] AudioClip pickupSFX;
+    [SerializeField] AudioClip breakSFX;
 
     StateMachine stateMachine;
     Collider2D col;
@@ -36,6 +39,7 @@ public class Follower : Survivor
         target = queue.GetNextInLine(this).transform;
         Follow(target);
         stateMachine.GoToState("FOLLOW");
+        AudioManager.Instance.PlaySFX(pickupSFX);
     }
 
     public void QueueOut()
@@ -52,6 +56,7 @@ public class Follower : Survivor
         }
 
         stateMachine.GoToState("LOST");
+        AudioManager.Instance.PlaySFX(breakSFX);
     }
 
     void EnterLostState()
@@ -91,7 +96,10 @@ public class Follower : Survivor
     public override void Die()
     {
         base.Die();
+
         GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().PlayHUDAnimation();
+        GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().UpdateSurvivorsCount(queue.survivors.Count, GameObject.FindGameObjectsWithTag("Follower").Length);
+
         stateMachine.GoToState("DEAD");
     }
 

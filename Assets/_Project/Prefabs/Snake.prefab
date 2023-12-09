@@ -3882,7 +3882,7 @@ GameObject:
   - component: {fileID: 9025060482999118382}
   m_Layer: 7
   m_Name: Tail
-  m_TagString: Untagged
+  m_TagString: WeakSpot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

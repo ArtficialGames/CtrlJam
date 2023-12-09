@@ -284,7 +284,12 @@ public class Snake : MonoBehaviour
             yield return new WaitForSeconds(0.15f);
         }
 
-        transform.root.GetComponent<SpriteRenderer>().color = Color.white;
+        foreach (Transform item in transform.root)
+        {
+            item.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+
+        transform.root.GetChild(0).Find("Sprite").GetComponent<SpriteRenderer>().color = Color.white;
     }
 
     public void TakeDamage(int damage)

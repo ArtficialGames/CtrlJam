@@ -45,7 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5de1e643a3b6c44b55f421908b444d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 1869612713446678291}
+  musicVolume: 0.5
+  sfxVolume: 0.5
+  musicAudioSource: {fileID: 1869612713446678291}
 --- !u!1 &7159766310560357068
 GameObject:
   m_ObjectHideFlags: 0

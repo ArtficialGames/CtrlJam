@@ -15,10 +15,12 @@ public class StartMenuController : MonoBehaviour
     private void Awake()
     {
         playBtn.onClick.AddListener(Play);
+        ExitBtn.onClick.AddListener(Exit);
         sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
         musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
-        sfxSlider.value = AudioManager.Instance.GetSFXVolume();
-        musicSlider.value = AudioManager.Instance.GetMusicVolume();
+
+        sfxSlider.value = PlayerPrefs.GetFloat("SFX_Volume", 0.5f);
+        musicSlider.value = PlayerPrefs.GetFloat("Music_Volume", 0.5f);
     }
 
     public void Play()

@@ -1,7 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -14,7 +12,7 @@ public class Torch : LightSource
     [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField] Animator animator;
-    [SerializeField] AnimatorController withTorch;
+    [SerializeField] AnimatorOverrideController withTorch;
     [SerializeField] AnimatorOverrideController noTorch;
 
     Leader leader;

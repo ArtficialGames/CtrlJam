@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Leader : Survivor
 {
@@ -31,6 +32,14 @@ public class Leader : Survivor
     private void Update()
     {
         HandleAnimation();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Pause();
+    }
+
+    void Pause()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void Attack(GameObject target)

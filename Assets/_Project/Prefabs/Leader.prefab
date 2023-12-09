@@ -926,7 +926,7 @@ MonoBehaviour:
   col: {fileID: 7288061644377430406}
   spriteRenderer: {fileID: 4425831591031580562}
   animator: {fileID: 1219248931347127901}
-  withTorch: {fileID: 9100000, guid: f5351e11ec7f9c346a579ca887ecf70a, type: 2}
+  withTorch: {fileID: 22100000, guid: 0f81a0c38ea430e43be25b3523d93905, type: 2}
   noTorch: {fileID: 22100000, guid: c624249a78434b7468203fc5b1e84f65, type: 2}
 --- !u!58 &7288061644377430406
 CircleCollider2D:

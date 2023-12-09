@@ -151,7 +151,7 @@ public class Snake : MonoBehaviour
 
     Vector2 GetWanderingPos()
     {
-        Vector2 randomPos = new Vector2(Random.Range(-70f, 75f), Random.Range(90f, 187f));
+        Vector2 randomPos = new Vector2(Random.Range(-65f, 70f), Random.Range(85f, 180f));
         Vector2 pos = new Vector2(Random.Range(distanceFromTargetMin, distanceFromTargetMax), Random.Range(distanceFromTargetMin, distanceFromTargetMax));
 
         /*while(Vector2.Distance(leader.transform.position, pos) < leader.GetComponentInChildren<Torch>().GetRadius())
@@ -167,14 +167,34 @@ public class Snake : MonoBehaviour
     }
     Vector2 GetPosAfterDamage()
     {
-        Vector2 pos = new Vector2(0f, 150f);
+        Vector2 pos1 = new Vector2(60f, 105f);
+        Vector2 pos2 = new Vector2(-60f, 105f);
+        Vector2 pos3 = new Vector2(-60f, 180f);
+        Vector2 pos4 = new Vector2(60f, 180f);
 
-        if (leader.transform.position.y < 0f)
-            pos = new Vector2(0f, 150f);
+
+        List<Vector2> positions = new List<Vector2>();
+        positions.Add(pos1);
+        positions.Add(pos2);
+        positions.Add(pos3);
+        positions.Add(pos4);
+
+        Vector2 farthest = positions[0];
+
+        foreach (var position in positions)
+        {
+            if (Vector2.Distance(position, (Vector2)leader.transform.position) > Vector2.Distance(farthest, (Vector2)leader.transform.position))
+                farthest = position;
+        }
+
+        return farthest;
+
+        /*if (leader.transform.position.y < 135f)
+            pos = new Vector2(0f, 100f);
         else
-            pos = new Vector2(0f, 100);
+            pos = new Vector2(0f, 170f);
 
-        return pos;
+        return pos;*/
     }
 
     void Attack(GameObject attackTarget)
@@ -216,7 +236,7 @@ public class Snake : MonoBehaviour
     {
         PerformPath();
 
-        if (Vector2.Distance(transform.position, wanderPos) < 2f)
+        if (Vector2.Distance(transform.position, wanderPos) < 5f)
             wanderPos = GetWanderingPos();
 
         if (GetTarget() != null)

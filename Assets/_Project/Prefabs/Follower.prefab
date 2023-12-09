@@ -350,5 +350,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 3816990258077994140}
-  normal: {fileID: 9100000, guid: b1fb5ead7a7b43d4182b0d9e8958ac59, type: 2}
+  normal: {fileID: 22100000, guid: d1d6c2eeb1636dc439337a6c842adf0e, type: 2}
   lowLight: {fileID: 22100000, guid: 5ec9741aa18430a4f8835e7266eca6ed, type: 2}

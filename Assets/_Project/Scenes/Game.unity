@@ -5641,6 +5641,90 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 112207092288971796, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 112207092288971796, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 112207092288971796, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 677274888167052232, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 677274888167052232, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 677274888167052232, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 847948162848009044, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 847948162848009044, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 847948162848009044, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 998358993428455664, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 998358993428455664, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 998358993428455664, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108846793505206164, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108846793505206164, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1108846793505206164, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202223044242257687, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202223044242257687, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1202223044242257687, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398680309993609575, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398680309993609575, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398680309993609575, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 2961680932361193075, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5681,9 +5765,189 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3190179900250225590, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190179900250225590, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3190179900250225590, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638649060956262096, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638649060956262096, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638649060956262096, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822091988062572396, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822091988062572396, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822091988062572396, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066146076237530785, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066146076237530785, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4066146076237530785, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629952987782098686, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629952987782098686, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4629952987782098686, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776270980332435320, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776270980332435320, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4776270980332435320, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023560964947361465, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023560964947361465, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023560964947361465, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222116285241842888, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222116285241842888, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5222116285241842888, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540773415518201188, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540773415518201188, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5540773415518201188, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 6356394502883541729, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
       propertyPath: m_Name
       value: Snake
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361735730861860665, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361735730861860665, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361735730861860665, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506989601723559820, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506989601723559820, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506989601723559820, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644233689530363749, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644233689530363749, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644233689530363749, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490379070713760940, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490379070713760940, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7490379070713760940, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544937602535766165, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544937602535766165, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8544937602535766165, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025060482999118382, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_EnableCollision
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025060482999118382, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_LowerAngle
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 9025060482999118382, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_AngleLimits.m_UpperAngle
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

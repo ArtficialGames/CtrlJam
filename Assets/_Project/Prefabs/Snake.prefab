@@ -2879,6 +2879,8 @@ MonoBehaviour:
   afterDamageSpeed: 15000
   attackDuration: 1
   nextWaypointDistance: 1
+  distanceFromTargetMin: 5
+  distanceFromTargetMax: 10
   mapSize:
     m_Center: {x: 0, y: 140, z: 0}
     m_Extent: {x: 200, y: 102, z: 0}

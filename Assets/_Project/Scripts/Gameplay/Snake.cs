@@ -12,6 +12,8 @@ public class Snake : MonoBehaviour
     [SerializeField] float afterDamageSpeed;
     [SerializeField] float attackDuration;
     [SerializeField] float nextWaypointDistance = 2f;
+    [SerializeField] float distanceFromTargetMin;
+    [SerializeField] float distanceFromTargetMax;
     [SerializeField] Bounds mapSize;
 
     Rigidbody2D rb;
@@ -149,14 +151,19 @@ public class Snake : MonoBehaviour
 
     Vector2 GetWanderingPos()
     {
-        Vector2 pos = new Vector2(Random.Range(-70f, 75f), Random.Range(90f, 187f));
+        Vector2 randomPos = new Vector2(Random.Range(-70f, 75f), Random.Range(90f, 187f));
+        Vector2 pos = new Vector2(Random.Range(distanceFromTargetMin, distanceFromTargetMax), Random.Range(distanceFromTargetMin, distanceFromTargetMax));
 
         /*while(Vector2.Distance(leader.transform.position, pos) < leader.GetComponentInChildren<Torch>().GetRadius())
             pos = new Vector2(Random.Range(-70f, 75f), Random.Range(90, 187f));
 
         print(pos);*/
 
-        return pos;
+        if (leader.transform.position.y > 90f)
+            return (Vector2)leader.transform.position + pos;
+        else
+            return randomPos;
+
     }
     Vector2 GetPosAfterDamage()
     {

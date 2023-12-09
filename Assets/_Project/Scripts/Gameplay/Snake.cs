@@ -137,7 +137,7 @@ public class Snake : MonoBehaviour
         {
             Survivor lastInQueue = leader.queue.survivors[leader.queue.survivors.Count - 1];
 
-            if (lastInQueue.gameObject.CompareTag("Follower") && !lastInQueue.GetComponent<Follower>().isSafe)
+            if (lastInQueue.gameObject.CompareTag("Follower") && !lastInQueue.GetComponent<Follower>().isSafe || lastInQueue.transform.CompareTag("Leader"))
             {
                 if(leader.transform.position.y > 90f)
                     return leader.queue.survivors[leader.queue.survivors.Count - 1].transform;

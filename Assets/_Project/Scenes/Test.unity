@@ -31875,6 +31875,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 69825026120704408, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.4
+      objectReference: {fileID: 0}
     - target: {fileID: 2961680932361193075, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -31915,13 +31919,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5281611480255342853, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
+      propertyPath: m_Size.x
+      value: 2.67
+      objectReference: {fileID: 0}
     - target: {fileID: 6356394502883541729, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
       propertyPath: m_Name
       value: Snake
-      objectReference: {fileID: 0}
-    - target: {fileID: 6547536605326644786, guid: 49a1315c530b13b4f991900047253aa1, type: 3}
-      propertyPath: m_TagString
-      value: WeakSpot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

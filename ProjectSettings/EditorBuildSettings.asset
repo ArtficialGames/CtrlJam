@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/Game2.unity
     guid: 1ac9652f5c4ccf544ba30a1301af8d0e
+  - enabled: 1
+    path: Assets/_Project/Scenes/Pause.unity
+    guid: ffbfb78a893f01f41b646ad155c8d238
+  - enabled: 1
+    path: Assets/_Project/Scenes/Credits.unity
+    guid: 2e614e8c60b2a3249a193bf6564491e1
   m_configObjects: {}

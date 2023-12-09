@@ -39,7 +39,13 @@ public class Leader : Survivor
 
     void Pause()
     {
-        SceneManager.LoadScene(0);
+        if (Time.timeScale == 0)
+        {
+            SceneManager.UnloadSceneAsync("Pause");
+            Time.timeScale = 1;
+        }
+        else
+            SceneManager.LoadScene("Pause", LoadSceneMode.Additive);
     }
 
     void Attack(GameObject target)

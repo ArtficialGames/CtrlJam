@@ -16,6 +16,7 @@ public class StartMenuController : MonoBehaviour
     {
         playBtn.onClick.AddListener(Play);
         ExitBtn.onClick.AddListener(Exit);
+        CreditsBtn.onClick.AddListener(Credits);
         sfxSlider.onValueChanged.AddListener(ChangeSFXVolume);
         musicSlider.onValueChanged.AddListener(ChangeMusicVolume);
 
@@ -30,7 +31,7 @@ public class StartMenuController : MonoBehaviour
 
     public void Credits()
     {
-        //SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Credits");
     }
 
     public void Exit()

@@ -11,6 +11,7 @@ public class Snake : MonoBehaviour
     [SerializeField] float afterDamageSpeed;
     [SerializeField] float attackDuration;
     [SerializeField] float nextWaypointDistance = 2f;
+    [SerializeField] Bounds mapSize;
 
     Rigidbody2D rb;
     bool isAttacking;
@@ -134,8 +135,11 @@ public class Snake : MonoBehaviour
         {
             Survivor lastInQueue = leader.queue.survivors[leader.queue.survivors.Count - 1];
 
-            if (lastInQueue.gameObject.CompareTag("Follower") && !lastInQueue.GetComponent<Follower>().isSafe || leader.queue.survivors[leader.queue.survivors.Count - 1].CompareTag("Leader"))
-                return leader.queue.survivors[leader.queue.survivors.Count - 1].transform;
+            if (lastInQueue.gameObject.CompareTag("Follower") && !lastInQueue.GetComponent<Follower>().isSafe)
+            {
+                if(mapSize.Contains(leader.transform.position))
+                    return leader.queue.survivors[leader.queue.survivors.Count - 1].transform;
+            }
         }
 
         return null;
@@ -143,21 +147,23 @@ public class Snake : MonoBehaviour
 
     Vector2 GetWanderingPos()
     {
-        Vector2 pos = new Vector2(Random.Range(-25f, 25f), Random.Range(-25f, 25f));
+        Vector2 pos = new Vector2(Random.Range(-70f, 75f), Random.Range(90f, 187f));
 
-        while(Vector2.Distance(leader.transform.position, pos) < leader.GetComponentInChildren<Torch>().GetRadius())
-            pos = new Vector2(Random.Range(-25f, 25f), Random.Range(-25f, 25f));
+        /*while(Vector2.Distance(leader.transform.position, pos) < leader.GetComponentInChildren<Torch>().GetRadius())
+            pos = new Vector2(Random.Range(-70f, 75f), Random.Range(90, 187f));
+
+        print(pos);*/
 
         return pos;
     }
     Vector2 GetPosAfterDamage()
     {
-        Vector2 pos = new Vector2(0f, 20f);
+        Vector2 pos = new Vector2(0f, 150f);
 
         if (leader.transform.position.y < 0f)
-            pos = new Vector2(0f, 20f);
+            pos = new Vector2(0f, 150f);
         else
-            pos = new Vector2(0f, -20f);
+            pos = new Vector2(0f, 100);
 
         return pos;
     }
@@ -279,5 +285,10 @@ public class Snake : MonoBehaviour
     void Die()
     {
         Destroy(gameObject.transform.root.gameObject);
+    }
+
+    private void Update()
+    {
+        print(stateMachine.GetCurrentStateName());
     }
 }

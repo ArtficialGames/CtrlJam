@@ -17,8 +17,6 @@ public class SnakeSpriteSetter : MonoBehaviour
 
     private void Update()
     {
-        print(transform.eulerAngles);
-
         if (transform.eulerAngles.z < 25f || transform.eulerAngles.z > 340f)
             spriteRenderer.sprite = up;
 

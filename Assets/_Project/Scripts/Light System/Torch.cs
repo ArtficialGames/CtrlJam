@@ -37,7 +37,11 @@ public class Torch : LightSource
         else
             animator.runtimeAnimatorController = noTorch;
 
-        col.radius = range;
+        if(col.radius > 0f)
+        {
+            col.radius -= decaySpeed * Time.deltaTime;
+        }
+
         torchLight.pointLightInnerRadius = range;
         torchLight.pointLightOuterRadius = range;
         spriteRenderer.transform.parent.localScale = new Vector3(range, range, range);
@@ -66,5 +70,12 @@ public class Torch : LightSource
 
         if (range > maxTorchLightRadius)
             range = maxTorchLightRadius;
+
+        col.radius = range;
+    }
+
+    private void OnDisable()
+    {
+        PixelLighting.Instance.lightSources.Remove(this);
     }
 }

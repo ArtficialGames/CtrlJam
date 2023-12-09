@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using Unity.VisualScripting;
 
 public class Snake : MonoBehaviour
 {
@@ -98,6 +99,7 @@ public class Snake : MonoBehaviour
         Vector2 force = direction * currentSpeed * Time.fixedDeltaTime;
 
         rb.AddForce(force);
+        Debug.DrawRay(transform.position, rb.velocity.normalized);
 
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
 
@@ -137,7 +139,7 @@ public class Snake : MonoBehaviour
 
             if (lastInQueue.gameObject.CompareTag("Follower") && !lastInQueue.GetComponent<Follower>().isSafe)
             {
-                if(mapSize.Contains(leader.transform.position))
+                if(leader.transform.position.y > 90f)
                     return leader.queue.survivors[leader.queue.survivors.Count - 1].transform;
             }
         }
@@ -263,9 +265,22 @@ public class Snake : MonoBehaviour
     {
         for (int i = 0; i < 1f / 0.3f; i++)
         {
-            transform.root.GetComponent<SpriteRenderer>().color = Color.red;
+            foreach (Transform item in transform.root)
+            {
+                item.GetComponent<SpriteRenderer>().color = Color.red;
+            }
+
+            transform.root.GetChild(0).Find("Sprite").GetComponent<SpriteRenderer>().color = Color.red;
+
             yield return new WaitForSeconds(0.15f);
-            transform.root.GetComponent<SpriteRenderer>().color = Color.white;
+
+            foreach (Transform item in transform.root)
+            {
+                item.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+
+            transform.root.GetChild(0).Find("Sprite").GetComponent<SpriteRenderer>().color = Color.white;
+
             yield return new WaitForSeconds(0.15f);
         }
 

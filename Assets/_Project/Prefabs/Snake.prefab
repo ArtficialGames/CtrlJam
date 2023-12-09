@@ -147,7 +147,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &1202223044242257687
 HingeJoint2D:
@@ -172,8 +172,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &726787508684170266
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +321,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &6644233689530363749
 HingeJoint2D:
@@ -346,8 +346,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &766155495142974162
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &998358993428455664
 HingeJoint2D:
@@ -520,8 +520,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1235587909228444937
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &3822091988062572396
 HingeJoint2D:
@@ -694,8 +694,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1363210713035298804
 GameObject:
   m_ObjectHideFlags: 0
@@ -843,7 +843,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &2398680309993609575
 HingeJoint2D:
@@ -868,8 +868,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1363452366395591713
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,7 +1017,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &4776270980332435320
 HingeJoint2D:
@@ -1042,8 +1042,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1500245267404101323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1191,7 +1191,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &1108846793505206164
 HingeJoint2D:
@@ -1216,8 +1216,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1572253284388375329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &3190179900250225590
 HingeJoint2D:
@@ -1487,8 +1487,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &1724091522020689984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,7 +1636,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &7490379070713760940
 HingeJoint2D:
@@ -1661,8 +1661,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &2319066432112556045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1810,7 +1810,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &5222116285241842888
 HingeJoint2D:
@@ -1835,8 +1835,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &2448247459419008782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &6506989601723559820
 HingeJoint2D:
@@ -2009,8 +2009,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &2821048670233676230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,7 +2158,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &5540773415518201188
 HingeJoint2D:
@@ -2183,8 +2183,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3111515587961519685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2332,7 +2332,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &4629952987782098686
 HingeJoint2D:
@@ -2357,8 +2357,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3130612632234627410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2506,7 +2506,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &6361735730861860665
 HingeJoint2D:
@@ -2531,8 +2531,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3144281364809166124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2680,7 +2680,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &847948162848009044
 HingeJoint2D:
@@ -2705,8 +2705,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3182632110082751972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3090,7 +3090,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &4066146076237530785
 HingeJoint2D:
@@ -3115,8 +3115,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &3453993679627998227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3264,7 +3264,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &5023560964947361465
 HingeJoint2D:
@@ -3289,8 +3289,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &4283650167483359612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,7 +3438,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &677274888167052232
 HingeJoint2D:
@@ -3463,8 +3463,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &4406591572991114803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3612,7 +3612,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &112207092288971796
 HingeJoint2D:
@@ -3637,8 +3637,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &4766101336532651477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3786,7 +3786,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &3638649060956262096
 HingeJoint2D:
@@ -3811,8 +3811,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &6356394502883541729
 GameObject:
   m_ObjectHideFlags: 0
@@ -4039,8 +4039,8 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20
 --- !u!1 &7230677789966636939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,7 +4183,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.67, y: 2.62}
+  m_Size: {x: 1.1, y: 1.76}
   m_EdgeRadius: 0
 --- !u!1 &8936803580697889309
 GameObject:
@@ -4332,7 +4332,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.2, y: -0.25}
-  m_Size: {x: 1, y: 1.25}
+  m_Size: {x: 0.6, y: 1.25}
   m_Direction: 0
 --- !u!233 &8544937602535766165
 HingeJoint2D:
@@ -4357,5 +4357,5 @@ HingeJoint2D:
     m_MaximumMotorForce: 10000
   m_UseLimits: 1
   m_AngleLimits:
-    m_LowerAngle: -10
-    m_UpperAngle: 10
+    m_LowerAngle: -20
+    m_UpperAngle: 20

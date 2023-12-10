@@ -19,6 +19,7 @@ public class Snake : MonoBehaviour
     [SerializeField] AudioClip attackSFX;
     [SerializeField] AudioClip gameplayMusic;
     [SerializeField] AudioClip chaseMusic;
+    [SerializeField] List<Collider2D> cols;
 
     Rigidbody2D rb;
     public bool isAttacking;
@@ -49,7 +50,7 @@ public class Snake : MonoBehaviour
         State wanderState = new State("WANDER", EnterWanderState, WhileInWanderState, ExitWanderState);
         State chaseState = new State("CHASE", EnterChaseState, WhileInChaseState, ExitChaseState);
         State attackState = new State("ATTACK", null, null, null);
-        State damageState = new State("DAMAGE", EnterDamageState, WhileInDamageState, null);
+        State damageState = new State("DAMAGE", EnterDamageState, WhileInDamageState, ExitDamageState);
 
         State[] initialStates = { wanderState, chaseState, attackState, damageState };
 
@@ -289,12 +290,15 @@ public class Snake : MonoBehaviour
 
     void EnterDamageState()
     {
+        Colliders(false);
         rb.velocity = Vector2.zero;
         currentSpeed = afterDamageSpeed;
         afterDamagePos = GetPosAfterDamage();
         StartCoroutine(DamageAnim());
         InvokeRepeating("UpdateDamagedPath", 0f, 0.5f);
-        AudioManager.Instance.ChangeMusicClip(gameplayMusic);
+
+        if (AudioManager.Instance.GetCurrentMusic() != gameplayMusic)
+            AudioManager.Instance.ChangeMusicClip(gameplayMusic);
     }
 
     void WhileInDamageState()
@@ -307,6 +311,8 @@ public class Snake : MonoBehaviour
 
     void ExitDamageState()
     {
+        Colliders(true);
+
         CancelInvoke();
     }
 
@@ -356,4 +362,13 @@ public class Snake : MonoBehaviour
         GameController.Instance.Win();
         Destroy(gameObject.transform.root.gameObject);
     }
+
+    void Colliders(bool state)
+    {
+        foreach (var collider in cols)
+        {
+            collider.enabled = state;
+        }
+    }
+
 }

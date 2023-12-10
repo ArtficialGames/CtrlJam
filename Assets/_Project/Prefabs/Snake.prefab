@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4547062703970560175}
   - component: {fileID: 4410083264267714678}
   - component: {fileID: 1202223044242257687}
+  - component: {fileID: 915783769025582525}
   m_Layer: 7
   m_Name: Body (3)
   m_TagString: Untagged
@@ -174,6 +175,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &915783769025582525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694997144015502967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &726787508684170266
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +206,7 @@ GameObject:
   - component: {fileID: 6946517413415070865}
   - component: {fileID: 7360007173677654606}
   - component: {fileID: 6644233689530363749}
+  - component: {fileID: 8327141120664249609}
   m_Layer: 7
   m_Name: Body (12)
   m_TagString: Untagged
@@ -348,6 +368,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8327141120664249609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726787508684170266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &766155495142974162
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,6 +399,7 @@ GameObject:
   - component: {fileID: 6888342460806462335}
   - component: {fileID: 7834527199421567316}
   - component: {fileID: 998358993428455664}
+  - component: {fileID: 2628681585628520102}
   m_Layer: 7
   m_Name: Body (19)
   m_TagString: Untagged
@@ -522,6 +561,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &2628681585628520102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766155495142974162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1235587909228444937
 GameObject:
   m_ObjectHideFlags: 0
@@ -535,6 +592,7 @@ GameObject:
   - component: {fileID: 8163142991232314167}
   - component: {fileID: 3396081893035397594}
   - component: {fileID: 3822091988062572396}
+  - component: {fileID: 6291769230264645970}
   m_Layer: 7
   m_Name: Body (18)
   m_TagString: Untagged
@@ -696,6 +754,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &6291769230264645970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1235587909228444937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1363210713035298804
 GameObject:
   m_ObjectHideFlags: 0
@@ -709,6 +785,7 @@ GameObject:
   - component: {fileID: 8065426013025561850}
   - component: {fileID: 1606739816870376766}
   - component: {fileID: 2398680309993609575}
+  - component: {fileID: 4556631947736990375}
   m_Layer: 7
   m_Name: Body (11)
   m_TagString: Untagged
@@ -870,6 +947,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &4556631947736990375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363210713035298804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1363452366395591713
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,6 +978,7 @@ GameObject:
   - component: {fileID: 4832543417099798958}
   - component: {fileID: 1595294176872446119}
   - component: {fileID: 4776270980332435320}
+  - component: {fileID: 8002607154488532993}
   m_Layer: 7
   m_Name: Body (7)
   m_TagString: Untagged
@@ -1044,6 +1140,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8002607154488532993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363452366395591713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1500245267404101323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1171,7 @@ GameObject:
   - component: {fileID: 1291040370716227784}
   - component: {fileID: 1743672606506002673}
   - component: {fileID: 1108846793505206164}
+  - component: {fileID: 6626103160340108507}
   m_Layer: 7
   m_Name: Body (1)
   m_TagString: Untagged
@@ -1218,6 +1333,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &6626103160340108507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500245267404101323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1572253284388375329
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,6 +1476,7 @@ GameObject:
   - component: {fileID: 7391854153392095560}
   - component: {fileID: 8762276085627799380}
   - component: {fileID: 3190179900250225590}
+  - component: {fileID: 4912835184365893117}
   m_Layer: 7
   m_Name: Body (4)
   m_TagString: Untagged
@@ -1504,6 +1638,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &4912835184365893117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680753005091784799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &1724091522020689984
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +1669,7 @@ GameObject:
   - component: {fileID: 6637796284291955754}
   - component: {fileID: 4581290076558124937}
   - component: {fileID: 7490379070713760940}
+  - component: {fileID: 1668666954638307856}
   m_Layer: 7
   m_Name: Body (8)
   m_TagString: Untagged
@@ -1678,6 +1831,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &1668666954638307856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1724091522020689984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &2319066432112556045
 GameObject:
   m_ObjectHideFlags: 0
@@ -1691,6 +1862,7 @@ GameObject:
   - component: {fileID: 261505430344300648}
   - component: {fileID: 3781079631310622152}
   - component: {fileID: 5222116285241842888}
+  - component: {fileID: 650468103934694034}
   m_Layer: 7
   m_Name: Body (17)
   m_TagString: Untagged
@@ -1852,6 +2024,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &650468103934694034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319066432112556045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &2448247459419008782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,6 +2055,7 @@ GameObject:
   - component: {fileID: 2620088762453092572}
   - component: {fileID: 8380381843185270083}
   - component: {fileID: 6506989601723559820}
+  - component: {fileID: 1150230597810045109}
   m_Layer: 7
   m_Name: Body (9)
   m_TagString: Untagged
@@ -2026,6 +2217,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &1150230597810045109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2448247459419008782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &2821048670233676230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2248,7 @@ GameObject:
   - component: {fileID: 6057272758201391915}
   - component: {fileID: 7412154855634684347}
   - component: {fileID: 5540773415518201188}
+  - component: {fileID: 5636582763861955635}
   m_Layer: 7
   m_Name: Body (16)
   m_TagString: Untagged
@@ -2200,6 +2410,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &5636582763861955635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2821048670233676230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &3111515587961519685
 GameObject:
   m_ObjectHideFlags: 0
@@ -2213,6 +2441,7 @@ GameObject:
   - component: {fileID: 7664249948915382826}
   - component: {fileID: 3526402804698879884}
   - component: {fileID: 4629952987782098686}
+  - component: {fileID: 6566116819744214660}
   m_Layer: 7
   m_Name: Body (2)
   m_TagString: Untagged
@@ -2374,6 +2603,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &6566116819744214660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3111515587961519685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &3130612632234627410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,6 +2634,7 @@ GameObject:
   - component: {fileID: 6495597856257027927}
   - component: {fileID: 5086128862009423311}
   - component: {fileID: 6361735730861860665}
+  - component: {fileID: 2694273250157099825}
   m_Layer: 7
   m_Name: Body (10)
   m_TagString: Untagged
@@ -2548,6 +2796,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &2694273250157099825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3130612632234627410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &3144281364809166124
 GameObject:
   m_ObjectHideFlags: 0
@@ -2561,6 +2827,7 @@ GameObject:
   - component: {fileID: 3555158579786658587}
   - component: {fileID: 2782892981214980554}
   - component: {fileID: 847948162848009044}
+  - component: {fileID: 6568759386654718786}
   m_Layer: 7
   m_Name: Body (20)
   m_TagString: Untagged
@@ -2722,6 +2989,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &6568759386654718786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3144281364809166124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &3182632110082751972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2902,6 +3187,30 @@ MonoBehaviour:
   attackSFX: {fileID: 8300000, guid: 4c326eca08ef52445b2ff0a252f8507a, type: 3}
   gameplayMusic: {fileID: 8300000, guid: b932ee86a769ae847ab85adb838637dd, type: 3}
   chaseMusic: {fileID: 8300000, guid: b92df9ddb3ad9ec4aa5e36b73b42c439, type: 3}
+  cols:
+  - {fileID: 1737228407961377646}
+  - {fileID: 8952807732637444804}
+  - {fileID: 1743672606506002673}
+  - {fileID: 3526402804698879884}
+  - {fileID: 4410083264267714678}
+  - {fileID: 8762276085627799380}
+  - {fileID: 6344008877055452209}
+  - {fileID: 2849164581465469112}
+  - {fileID: 1595294176872446119}
+  - {fileID: 4581290076558124937}
+  - {fileID: 8380381843185270083}
+  - {fileID: 5086128862009423311}
+  - {fileID: 1606739816870376766}
+  - {fileID: 7360007173677654606}
+  - {fileID: 8455939534059309168}
+  - {fileID: 8161952023965153168}
+  - {fileID: 4153288459200889401}
+  - {fileID: 7412154855634684347}
+  - {fileID: 3781079631310622152}
+  - {fileID: 3396081893035397594}
+  - {fileID: 7834527199421567316}
+  - {fileID: 2782892981214980554}
+  - {fileID: 4680478091501008164}
   isAttacking: 0
   isMouthOpen: 0
 --- !u!114 &8567666056738429307
@@ -2967,60 +3276,60 @@ MonoBehaviour:
   upLeft: {fileID: 2121080949, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   upHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 1903734379, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -1239928653, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -1776757702, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -1342740518, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   upRightHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 671696853, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 516113014, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -209018670, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 33213603, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   rightHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -169905313, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -198147290, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -651014881, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -465840179, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   downRightHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 2123550394, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -322421256, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 1526855157, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 1495115713, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   downHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -950628699, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 1328332949, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 9818783, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 910340949, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   downLeftHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 1210830374, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -1818020046, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: -1437560214, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: -1704616636, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   leftHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 2121080949, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 462610409, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 2084326682, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 803230624, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
   upLeftHead:
     main:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 2121080949, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 462610409, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
     lowLight:
-    - {fileID: 0}
-    - {fileID: 0}
+    - {fileID: 2084326682, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+    - {fileID: 803230624, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
 --- !u!1 &3413672895720171504
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,6 +3343,7 @@ GameObject:
   - component: {fileID: 34848150201269376}
   - component: {fileID: 8952807732637444804}
   - component: {fileID: 4066146076237530785}
+  - component: {fileID: 8850558513754911227}
   m_Layer: 7
   m_Name: Body
   m_TagString: Untagged
@@ -3195,6 +3505,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8850558513754911227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3413672895720171504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &3453993679627998227
 GameObject:
   m_ObjectHideFlags: 0
@@ -3208,6 +3536,7 @@ GameObject:
   - component: {fileID: 645623335953072586}
   - component: {fileID: 2849164581465469112}
   - component: {fileID: 5023560964947361465}
+  - component: {fileID: 8690799055802006977}
   m_Layer: 7
   m_Name: Body (6)
   m_TagString: Untagged
@@ -3369,6 +3698,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8690799055802006977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453993679627998227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &4283650167483359612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,6 +3729,7 @@ GameObject:
   - component: {fileID: 6191776876128138709}
   - component: {fileID: 6344008877055452209}
   - component: {fileID: 677274888167052232}
+  - component: {fileID: 332566399378621747}
   m_Layer: 7
   m_Name: Body (5)
   m_TagString: Untagged
@@ -3543,6 +3891,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &332566399378621747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4283650167483359612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &4406591572991114803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3556,6 +3922,7 @@ GameObject:
   - component: {fileID: 6308781149657719936}
   - component: {fileID: 4153288459200889401}
   - component: {fileID: 112207092288971796}
+  - component: {fileID: 8309744181871769271}
   m_Layer: 7
   m_Name: Body (15)
   m_TagString: Untagged
@@ -3717,6 +4084,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8309744181871769271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4406591572991114803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &4766101336532651477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,6 +4115,7 @@ GameObject:
   - component: {fileID: 9043007850321913451}
   - component: {fileID: 8161952023965153168}
   - component: {fileID: 3638649060956262096}
+  - component: {fileID: 587190074776840099}
   m_Layer: 7
   m_Name: Body (14)
   m_TagString: Untagged
@@ -3891,6 +4277,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &587190074776840099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4766101336532651477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &6356394502883541729
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,6 +4362,7 @@ GameObject:
   - component: {fileID: 6597777660883631533}
   - component: {fileID: 4680478091501008164}
   - component: {fileID: 9025060482999118382}
+  - component: {fileID: 8324874853693480938}
   m_Layer: 7
   m_Name: Tail
   m_TagString: WeakSpot
@@ -4119,6 +4524,24 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &8324874853693480938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6547536605326644786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: 799944448, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 799944448, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 799944448, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -699892089, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
 --- !u!1 &7230677789966636939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4277,6 +4700,7 @@ GameObject:
   - component: {fileID: 8074384317716372658}
   - component: {fileID: 8455939534059309168}
   - component: {fileID: 8544937602535766165}
+  - component: {fileID: 3970275340520007261}
   m_Layer: 7
   m_Name: Body (13)
   m_TagString: Untagged
@@ -4438,3 +4862,21 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: -15
     m_UpperAngle: 15
+--- !u!114 &3970275340520007261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8936803580697889309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 752b5df321fb6834194c5f4d23656e29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightSprite:
+  - {fileID: 0}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: -680884317, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}
+  - {fileID: 854884200, guid: 51ccdff4b81b1d54684b8a2108d7787c, type: 3}

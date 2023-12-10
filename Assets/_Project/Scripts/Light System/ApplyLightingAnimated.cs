@@ -24,7 +24,7 @@ public class ApplyLightingAnimated : MonoBehaviour
         {
             lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
 
-            if (lightLevel == 0)
+            if (lightLevel == 0 && GetComponent<Follower>().queue == null)
                 spriteRenderer.enabled = false;
             else
             {

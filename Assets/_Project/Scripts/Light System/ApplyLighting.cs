@@ -17,10 +17,13 @@ public class ApplyLighting : MonoBehaviour
 
     private void UpdateLighting()
     {
+        spriteRenderer.sprite = lightSprite[lightSprite.Length - 1];
+
         if (PixelLighting.Instance != null)
         {
             lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
-            spriteRenderer.sprite = lightSprite[lightLevel];
+            if(lightLevel < lightSprite.Length)
+                spriteRenderer.sprite = lightSprite[lightLevel];
         }
     }
 }

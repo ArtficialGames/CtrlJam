@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: Cisteto Senestro Corps
   productName: Torchkin
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: d3056d301d3e841429e3933d13eee61f, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.0627451, g: 0.06666667, b: 0.0627451, a: 1}
   m_ShowUnitySplashScreen: 1

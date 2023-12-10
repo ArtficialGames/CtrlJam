@@ -15,10 +15,14 @@ public class LightTile : Tile
     {
         base.GetTileData(location, tileMap, ref tileData);
 
+
+        newSprite = lightSprite[lightSprite.Length - 1];
+
         if (PixelLighting.Instance != null)
         {
             lightLevel = PixelLighting.Instance.GetTileLightLevel(location);
-            newSprite = lightSprite[lightLevel];
+            if (lightLevel < lightSprite.Length)
+                newSprite = lightSprite[lightLevel];
         }
 
         if(Application.isPlaying)

@@ -5,33 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class Leader : Survivor
 {
-    [SerializeField] Transform followTarget;
+    public DynamicJoystick joystick;
     StateMachine stateMachine;
     public HUD hud;
-
-    public bool isOff;
 
     private void Awake()
     {
         queue = GetComponent<Queue>();
         stateMachine = GetComponent<StateMachine>();
 
-        State moveState = new State("MOVE", null, null, null);
+        State moveState = new State("MOVE", null, WhileInMoveState, null);
         State attackState = new State("ATTACK", null, null, null);
+        State offState = new State("OFF", null, null, null);
 
-        State[] initialStates = { moveState , attackState};
+        State[] initialStates = { moveState , attackState, offState };
         stateMachine.Init(initialStates);
 
         GetComponentInChildren<AttackDetection>().OnDectection += Attack;
-    }
-
-    private void FixedUpdate()
-    {
-        if (isOff)
-            return;
-
-        if(stateMachine.GetCurrentStateName() == "MOVE")
-            Follow(followTarget);
     }
 
     private void Update()
@@ -78,11 +68,15 @@ public class Leader : Survivor
         Destroy(gameObject);
     }
 
+    void WhileInMoveState()
+    {
+        MoveTo((Vector2)transform.position + joystick.Direction, joystick.Direction.magnitude);
+    }
+
     void HandleAnimation()
     {
         animator.SetFloat("Speed", rb.velocity.magnitude);
-        //spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
-        spriteRenderer.flipX = rb.velocity.x < 0;
+        spriteRenderer.flipX = joystick.Direction.x < 0;
 
     }
 }

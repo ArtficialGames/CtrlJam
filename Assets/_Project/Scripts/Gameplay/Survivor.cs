@@ -5,39 +5,31 @@ using UnityEngine;
 public abstract class Survivor : MonoBehaviour
 {
     [SerializeField] float speed;
-    [SerializeField] float maxCursorDistance = 5;
-    [SerializeField] protected float distanceFromTarget;
+    [SerializeField] float maxMultiplier = 5;
+    [SerializeField] float minMultiplier = 1;
+    [SerializeField] protected float distanceFromEndPos;
     [SerializeField] protected Rigidbody2D rb;
     [SerializeField] protected Animator animator;
     [SerializeField] protected SpriteRenderer spriteRenderer;
     [HideInInspector] public Queue queue;
     protected Transform target;
 
-    protected void Follow(Transform target)
+    protected void MoveTo(Vector2 pos, float speedMultiplier)
     {
-        target.position = new Vector3(target.position.x, target.position.y, 0);
 
-        Vector3 diff = target.position - transform.position;
+        Vector2 diff = pos - (Vector2)transform.position;
         diff.Normalize();
-
-        /*float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);*/
+        
 
         float currentSpeed;
-        currentSpeed = GetDistanceFromCursor() < maxCursorDistance ? speed * GetDistanceFromCursor() : speed * maxCursorDistance;
+        currentSpeed = speedMultiplier * maxMultiplier < minMultiplier ? speed * minMultiplier : speed * speedMultiplier * maxMultiplier;
 
-        if (Vector3.Distance(transform.position, target.position) > distanceFromTarget)
+        if (Vector3.Distance(transform.position, pos) > distanceFromEndPos)
         {
-            //rb.velocity = transform.up * currentSpeed * Time.fixedDeltaTime;
             rb.AddForce(diff * currentSpeed * Time.fixedDeltaTime);
         }
         else
             rb.velocity = Vector2.zero;
-    }
-
-    float GetDistanceFromCursor()
-    {
-        return Vector2.Distance(transform.position, Camera.main.ScreenToWorldPoint(Input.mousePosition));
     }
 
     public virtual void Die()

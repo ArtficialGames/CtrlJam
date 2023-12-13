@@ -37,7 +37,7 @@ public class Follower : Survivor
         queue = leader.GetComponent<Queue>();
         queue.Add(this);
         target = queue.GetNextInLine(this).transform;
-        Follow(target);
+        MoveTo(target.position, leader.joystick.Direction.magnitude);
         stateMachine.GoToState("FOLLOW");
         AudioManager.Instance.PlaySFX(pickupSFX);
     }
@@ -79,7 +79,7 @@ public class Follower : Survivor
 
     void WhileInFollowState()
     {
-        Follow(target);
+        MoveTo(target.position, queue.GetComponent<Leader>().joystick.Direction.magnitude);
 
         if (Vector3.Distance(transform.position, target.position) > distanceLimit)
             QueueOut();

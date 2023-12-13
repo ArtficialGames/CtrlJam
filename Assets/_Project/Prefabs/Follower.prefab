@@ -189,8 +189,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 500
-  maxCursorDistance: 4
-  distanceFromTarget: 1
+  maxMultiplier: 5
+  minMultiplier: 1
+  distanceFromEndPos: 1
   rb: {fileID: 5081802943518347073}
   animator: {fileID: 6113261472233438408}
   spriteRenderer: {fileID: 3816990258077994140}

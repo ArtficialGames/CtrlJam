@@ -37,7 +37,6 @@ public class Snake : MonoBehaviour
     Leader leader;
     StateMachine stateMachine;
     float currentSpeed;
-    int maxHealth;
 
     Path path;
     int currentWaypoint = 0;
@@ -68,8 +67,6 @@ public class Snake : MonoBehaviour
         State[] initialStates = { startState, sleepState, wanderState, chaseState, attackState, damageState, deadState };
 
         stateMachine.Init(initialStates);
-
-        maxHealth = health;
     }
 
     void SleepState()
@@ -79,7 +76,7 @@ public class Snake : MonoBehaviour
 
     IEnumerator SleepCoroutine()
     {
-        leader.isOff = true;
+        leader.GetComponent<StateMachine>().GoToState("OFF");
 
         //AudioManager.Instance.Pause();
 
@@ -122,7 +119,7 @@ public class Snake : MonoBehaviour
 
         musicDetector.enabled = true;
 
-        leader.isOff = false;
+        leader.GetComponent<StateMachine>().GoToState("MOVE");
     }
 
     void UpdateWanderingPath()
@@ -446,10 +443,4 @@ public class Snake : MonoBehaviour
             collider.enabled = state;
         }*/
     }
-
-    private void Update()
-    {
-        print(stateMachine.GetCurrentStateName());
-    }
-
 }

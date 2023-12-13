@@ -7,9 +7,7 @@ public class Torch : LightSource
 {
     [SerializeField] float decaySpeed;
     [SerializeField] float minRange;
-    [SerializeField] Light2D torchLight;
     [SerializeField] CircleCollider2D col;
-    [SerializeField] SpriteRenderer spriteRenderer;
 
     [SerializeField] Animator animator;
     [SerializeField] AnimatorOverrideController withTorch;
@@ -18,12 +16,12 @@ public class Torch : LightSource
     [SerializeField] GameObject lightCircle;
 
     Leader leader;
-    float maxTorchLightRadius;
+    float maxRadius;
 
     private void Awake()
     {
         leader = transform.root.GetComponent<Leader>();
-        maxTorchLightRadius = range;
+        maxRadius = range;
     }
 
     private void Update()
@@ -33,7 +31,7 @@ public class Torch : LightSource
             animator.runtimeAnimatorController = withTorch;
             lightCircle.SetActive(true);
             range -= decaySpeed * Time.deltaTime;
-            leader.hud.UpdateTorchAmount(Mathf.CeilToInt((range - minRange) / (maxTorchLightRadius - minRange) * 100f));
+            leader.hud.UpdateTorchAmount(Mathf.CeilToInt((range - minRange) / (maxRadius - minRange) * 100f));
         }
         else
         {
@@ -45,10 +43,6 @@ public class Torch : LightSource
         {
             col.radius -= decaySpeed * Time.deltaTime;
         }
-
-        torchLight.pointLightInnerRadius = range;
-        torchLight.pointLightOuterRadius = range;
-        spriteRenderer.transform.parent.localScale = new Vector3(range, range, range);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -63,17 +57,12 @@ public class Torch : LightSource
             collision.GetComponent<Follower>().isSafe = false;
     }
 
-    public float GetRadius()
-    {
-        return torchLight.pointLightInnerRadius;
-    }
-
     public void Refuel(float amount)
     {
         range += amount;
 
-        if (range > maxTorchLightRadius)
-            range = maxTorchLightRadius;
+        if (range > maxRadius)
+            range = maxRadius;
 
         col.radius = range;
     }

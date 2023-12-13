@@ -8,6 +8,7 @@ public class Torch : LightSource
     [SerializeField] float decaySpeed;
     [SerializeField] float minRange;
     [SerializeField] CircleCollider2D col;
+    [SerializeField] Transform mask;
 
     [SerializeField] Animator animator;
     [SerializeField] AnimatorOverrideController withTorch;
@@ -43,6 +44,8 @@ public class Torch : LightSource
         {
             col.radius -= decaySpeed * Time.deltaTime;
         }
+
+        mask.transform.localScale = Vector3.one * range;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

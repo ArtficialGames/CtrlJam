@@ -7,6 +7,8 @@ public class GameController : MonoBehaviour
 {
     public static GameController Instance;
     [SerializeField] WinBox winBox;
+    [SerializeField] AudioClip snakeDestroySFX;
+    [SerializeField] AudioClip winSFX;
 
     private void Awake()
     {
@@ -31,7 +33,32 @@ public class GameController : MonoBehaviour
 
     IEnumerator WinCorroutine()
     {
-        yield return new WaitForSeconds(1f);
+        AudioManager.Instance.ChangeMusicClip(null);
+
+        GameObject.FindGameObjectWithTag("SnakeHead").GetComponent<SnakeSpriteSetter>().TurnOffLight();
+
+        GameObject.FindGameObjectWithTag("WeakSpot").GetComponent<ApplyLighting>().TurnOff();
+
+        foreach (var item in GameObject.FindGameObjectsWithTag("SnakeBody"))
+        {
+            item.GetComponent<ApplyLighting>().TurnOff();
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("WeakSpot"));
+        AudioManager.Instance.PlaySFX(snakeDestroySFX);
+        yield return new WaitForSecondsRealtime(0.1f);
+
+        foreach (var item in GameObject.FindGameObjectsWithTag("SnakeBody"))
+        {
+            Destroy(item);
+            AudioManager.Instance.PlaySFX(snakeDestroySFX);
+            yield return new WaitForSecondsRealtime(0.1f);
+        }
+
+        Destroy(GameObject.FindGameObjectWithTag("SnakeHead"));
+        AudioManager.Instance.PlaySFX(snakeDestroySFX);
+
+        yield return new WaitForSeconds(0.5f);
 
         int highscore = PlayerPrefs.GetInt("Highscore", 0);
         int current = FindObjectOfType<Queue>().survivors.Count - 1;
@@ -45,5 +72,7 @@ public class GameController : MonoBehaviour
 
         winBox.gameObject.SetActive(true);
         winBox.Show(FindObjectOfType<Queue>().survivors.Count, highscore);
+
+        AudioManager.Instance.ChangeMusicClip(winSFX, false);
     }
 }

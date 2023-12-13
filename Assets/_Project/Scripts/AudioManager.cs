@@ -111,9 +111,22 @@ public class AudioManager : MonoBehaviour
 
     public void ChangeMusicClip(AudioClip newMusic, bool loop = true)
     {
+        if (musicAudioSource.clip == newMusic)
+            return;
+
         musicAudioSource.loop = loop;
         musicAudioSource.Stop();
         musicAudioSource.clip = newMusic;
+        musicAudioSource.Play();
+    }
+
+    public void Pause()
+    {
+        musicAudioSource.Pause();
+    }
+
+    public void Resume()
+    {
         musicAudioSource.Play();
     }
 

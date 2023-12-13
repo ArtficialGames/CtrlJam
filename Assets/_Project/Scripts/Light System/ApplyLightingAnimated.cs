@@ -24,13 +24,25 @@ public class ApplyLightingAnimated : MonoBehaviour
         {
             lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
 
-            if (lightLevel == 0 && GetComponent<Follower>().queue == null)
-                spriteRenderer.enabled = false;
+            if(GetComponent<Follower>().queue == null)
+            {
+                if (lightLevel == 0)
+                    spriteRenderer.enabled = false;
+                else
+                {
+                    spriteRenderer.enabled = true;
+
+                    if (lightLevel < 4 && lightLevel > 0)
+                        animator.runtimeAnimatorController = lowLight;
+                    else
+                        animator.runtimeAnimatorController = normal;
+                }
+            }
             else
             {
                 spriteRenderer.enabled = true;
 
-                if (lightLevel < 4 && lightLevel > 0)
+                if (lightLevel < 4)
                     animator.runtimeAnimatorController = lowLight;
                 else
                     animator.runtimeAnimatorController = normal;

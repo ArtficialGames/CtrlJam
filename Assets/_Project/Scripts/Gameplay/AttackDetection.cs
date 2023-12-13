@@ -7,7 +7,6 @@ public class AttackDetection : MonoBehaviour
 {
     public Action<GameObject> OnDectection;
     [SerializeField] bool isPlayer;
-    [SerializeField] AudioClip sfx;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -16,7 +15,6 @@ public class AttackDetection : MonoBehaviour
             if (collision.CompareTag("WeakSpot"))
             {
                 OnDectection?.Invoke(collision.gameObject);
-                AudioManager.Instance.PlaySFX(sfx);
             }
         }
         else

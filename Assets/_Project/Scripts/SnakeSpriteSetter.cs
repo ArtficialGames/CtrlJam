@@ -34,7 +34,7 @@ public class SnakeSpriteSetter : MonoBehaviour
     private void Awake()
     {
         snake = GetComponent<Snake>();
-        InvokeRepeating("UpdateLighting", 0f, 0.15f);
+        //InvokeRepeating("UpdateLighting", 0f, 0.15f);
 
         /*upHead.main[0] = up;
         upRightHead.main[0] = upRight;
@@ -97,6 +97,18 @@ public class SnakeSpriteSetter : MonoBehaviour
                     correctArray = 0;
             }
         }
+    }
+
+    public void TurnOffLight()
+    {
+        correctArray = 0;
+        CancelInvoke();
+    }
+
+    public void TurnOnLight()
+    {
+        correctArray = 0;
+        InvokeRepeating("UpdateLighting", 0f, 0.15f);
     }
 
 }

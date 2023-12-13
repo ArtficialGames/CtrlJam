@@ -9,6 +9,8 @@ public class Leader : Survivor
     StateMachine stateMachine;
     public HUD hud;
 
+    public bool isOff;
+
     private void Awake()
     {
         queue = GetComponent<Queue>();
@@ -25,6 +27,9 @@ public class Leader : Survivor
 
     private void FixedUpdate()
     {
+        if (isOff)
+            return;
+
         if(stateMachine.GetCurrentStateName() == "MOVE")
             Follow(followTarget);
     }
@@ -37,7 +42,7 @@ public class Leader : Survivor
             Pause();
     }
 
-    void Pause()
+    public void Pause()
     {
         if (Time.timeScale == 0)
         {
@@ -76,6 +81,8 @@ public class Leader : Survivor
     void HandleAnimation()
     {
         animator.SetFloat("Speed", rb.velocity.magnitude);
-        spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
+        //spriteRenderer.flipX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x < transform.position.x;
+        spriteRenderer.flipX = rb.velocity.x < 0;
+
     }
 }

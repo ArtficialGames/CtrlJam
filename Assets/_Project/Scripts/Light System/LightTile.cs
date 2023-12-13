@@ -15,7 +15,6 @@ public class LightTile : Tile
     {
         base.GetTileData(location, tileMap, ref tileData);
 
-
         newSprite = lightSprite[lightSprite.Length - 1];
 
         if (PixelLighting.Instance != null)

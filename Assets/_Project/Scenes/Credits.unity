@@ -174,7 +174,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 16
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 480, y: 270}
+  m_ReferenceResolution: {x: 270, y: 480}
   m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -243,7 +243,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &226587801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -492,10 +492,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.24222936
-    y: 0.24190477
-    width: 0.51446944
-    height: 0.5142857
+    x: -0.35231316
+    y: 0.22845691
+    width: 1.7081851
+    height: 0.54108214
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -563,10 +563,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 218159272}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 11.4916}
-  m_SizeDelta: {x: 425.4004, y: 183.8113}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 1.1008}
+  m_SizeDelta: {x: 0, y: -170.9766}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890102365
 MonoBehaviour:
@@ -588,10 +588,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fellipe Cavassa - Game Design, Visual Design, UI/UX \r\n\r\nFelipe Rodrigues
-    - Sound Design, Trilha Sonora, Game Design\r\n\r\nJ\xFAlio C\xE9sar Lan\xE7as
-    -  Level Design, Game Design, Arte\r\n\r\nMatheus Freire -  Pixel Art / Anima\xE7\xE3o\r\n\r\nVin\xEDcius
-    Gon\xE7alves - Programa\xE7\xE3o, Game Design"
+  m_text: "Game Design, Visual Design, UI/UX \r\nFellipe Cavassa\n\r\nSound Design,
+    Trilha Sonora, Game Design\r\nFelipe Rodrigues \n\r\nLevel Design, Game Design,
+    Arte\r\nJ\xFAlio C\xE9sar Lan\xE7as\n\r\nPixel Art / Anima\xE7\xE3o\r\nMatheus
+    Freire\n\r\nPrograma\xE7\xE3o, Game Design\nVin\xEDcius Gon\xE7alves"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 55a399a6dcd059f49b52b9048399a9bf, type: 2}
   m_sharedMaterial: {fileID: -2726325617626501956, guid: 55a399a6dcd059f49b52b9048399a9bf, type: 2}
@@ -618,19 +618,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
+  m_fontSize: 9.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 5
-  m_fontSizeMax: 8
+  m_fontSizeMax: 9.2
   m_fontStyle: 16
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: 51.9
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

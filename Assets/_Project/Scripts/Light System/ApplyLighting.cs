@@ -26,4 +26,17 @@ public class ApplyLighting : MonoBehaviour
                 spriteRenderer.sprite = lightSprite[lightLevel];
         }
     }
+
+    public void TurnOff()
+    {
+        spriteRenderer.sprite = lightSprite[lightSprite.Length - 1];
+        CancelInvoke();
+    }
+
+    public void TurnOn()
+    {
+        spriteRenderer.sprite = lightSprite[lightSprite.Length - 1];
+        InvokeRepeating("UpdateLighting", 0f, 0.15f);
+    }
+
 }

@@ -98,7 +98,7 @@ public class Follower : Survivor
         base.Die();
 
         GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().PlayHUDAnimation();
-        GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().UpdateSurvivorsCount(queue.survivors.Count, GameObject.FindGameObjectsWithTag("Follower").Length);
+        //GameObject.FindGameObjectWithTag("HUD").GetComponent<HUD>().UpdateSurvivorsCount(queue.survivors.Count, GameObject.FindGameObjectsWithTag("Follower").Length);
 
         stateMachine.GoToState("DEAD");
     }

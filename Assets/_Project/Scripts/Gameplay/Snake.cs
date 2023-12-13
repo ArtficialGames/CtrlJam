@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
-using Unity.VisualScripting;
 
 public class Snake : MonoBehaviour
 {
@@ -19,7 +18,14 @@ public class Snake : MonoBehaviour
     [SerializeField] AudioClip attackSFX;
     [SerializeField] AudioClip gameplayMusic;
     [SerializeField] AudioClip chaseMusic;
+    [SerializeField] AudioClip hitSFX;
     [SerializeField] List<Collider2D> cols;
+
+    [SerializeField] Cinemachine.CinemachineVirtualCamera vCam;
+    [SerializeField] AudioClip crySFX;
+
+    [SerializeField] Sprite head;
+    [SerializeField] MusicDetector musicDetector;
 
     Rigidbody2D rb;
     public bool isAttacking;
@@ -38,25 +44,85 @@ public class Snake : MonoBehaviour
     bool reachedEndOfPath;
     Seeker seeker;
 
+    bool dealtFirstDamage;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         seeker = GetComponent<Seeker>();
         stateMachine = GetComponent<StateMachine>();
+        musicDetector.enabled = false;
 
         GetComponentInChildren<AttackDetection>().OnDectection += Attack;
         leader = FindObjectOfType<Leader>();
 
+        State startState = new State("START", null, null, null);
+        State sleepState = new State("SLEEP", SleepState, null, null);
         State wanderState = new State("WANDER", EnterWanderState, WhileInWanderState, ExitWanderState);
         State chaseState = new State("CHASE", EnterChaseState, WhileInChaseState, ExitChaseState);
         State attackState = new State("ATTACK", null, null, null);
         State damageState = new State("DAMAGE", EnterDamageState, WhileInDamageState, ExitDamageState);
+        State deadState = new State("DEAD", null, null, null);
 
-        State[] initialStates = { wanderState, chaseState, attackState, damageState };
+
+        State[] initialStates = { startState, sleepState, wanderState, chaseState, attackState, damageState, deadState };
 
         stateMachine.Init(initialStates);
 
         maxHealth = health;
+    }
+
+    void SleepState()
+    {
+        StartCoroutine(SleepCoroutine());
+    }
+
+    IEnumerator SleepCoroutine()
+    {
+        leader.isOff = true;
+
+        //AudioManager.Instance.Pause();
+
+        GameObject.FindGameObjectWithTag("SnakeHead").GetComponent<SnakeSpriteSetter>().TurnOffLight();
+
+        GameObject.FindGameObjectWithTag("WeakSpot").GetComponent<ApplyLighting>().TurnOff();
+
+        foreach (var item in GameObject.FindGameObjectsWithTag("SnakeBody"))
+        {
+            item.GetComponent<ApplyLighting>().TurnOff();
+        }
+
+        vCam.Priority = 100;
+        yield return new WaitForSeconds(1.5f);
+
+        isMouthOpen = true;
+        AudioManager.Instance.PlaySFX(crySFX);
+        yield return new WaitForSeconds(0.25f);
+        isMouthOpen = false;
+
+        yield return new WaitForSeconds(1f);
+        vCam.Priority = 0;
+
+        yield return new WaitForSeconds(0.25f);
+
+        GameObject.FindGameObjectWithTag("SnakeHead").GetComponent<SnakeSpriteSetter>().TurnOnLight();
+
+        GameObject.FindGameObjectWithTag("WeakSpot").GetComponent<ApplyLighting>().TurnOn();
+
+        foreach (var item in GameObject.FindGameObjectsWithTag("SnakeBody"))
+        {
+            item.GetComponent<ApplyLighting>().TurnOn();
+        }
+
+        yield return new WaitForSeconds(1f);
+
+        //AudioManager.Instance.Resume();
+
+        stateMachine.GoToState("WANDER");
+
+        musicDetector.enabled = true;
+
+        leader.isOff = false;
     }
 
     void UpdateWanderingPath()
@@ -295,10 +361,17 @@ public class Snake : MonoBehaviour
         currentSpeed = afterDamageSpeed;
         afterDamagePos = GetPosAfterDamage();
         StartCoroutine(DamageAnim());
+        AudioManager.Instance.PlaySFX(hitSFX);
         InvokeRepeating("UpdateDamagedPath", 0f, 0.5f);
 
         if (AudioManager.Instance.GetCurrentMusic() != gameplayMusic)
             AudioManager.Instance.ChangeMusicClip(gameplayMusic);
+
+        if(dealtFirstDamage == false)
+        {
+            stateMachine.GoToState("SLEEP");
+            dealtFirstDamage = true;
+        }
     }
 
     void WhileInDamageState()
@@ -311,6 +384,8 @@ public class Snake : MonoBehaviour
 
     void ExitDamageState()
     {
+
+
         Colliders(true);
 
         CancelInvoke();
@@ -360,15 +435,21 @@ public class Snake : MonoBehaviour
     void Die()
     {
         GameController.Instance.Win();
-        Destroy(gameObject.transform.root.gameObject);
+        stateMachine.GoToState("DEAD");
+        //Destroy(gameObject.transform.root.gameObject);
     }
 
     void Colliders(bool state)
     {
-        foreach (var collider in cols)
+        /*foreach (var collider in cols)
         {
             collider.enabled = state;
-        }
+        }*/
+    }
+
+    private void Update()
+    {
+        print(stateMachine.GetCurrentStateName());
     }
 
 }

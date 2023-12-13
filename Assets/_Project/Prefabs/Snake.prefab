@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 915783769025582525}
   m_Layer: 7
   m_Name: Body (3)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 8327141120664249609}
   m_Layer: 7
   m_Name: Body (12)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,7 +402,7 @@ GameObject:
   - component: {fileID: 2628681585628520102}
   m_Layer: 7
   m_Name: Body (19)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 6291769230264645970}
   m_Layer: 7
   m_Name: Body (18)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 4556631947736990375}
   m_Layer: 7
   m_Name: Body (11)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,7 +981,7 @@ GameObject:
   - component: {fileID: 8002607154488532993}
   m_Layer: 7
   m_Name: Body (7)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1174,7 +1174,7 @@ GameObject:
   - component: {fileID: 6626103160340108507}
   m_Layer: 7
   m_Name: Body (1)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 4912835184365893117}
   m_Layer: 7
   m_Name: Body (4)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1672,7 +1672,7 @@ GameObject:
   - component: {fileID: 1668666954638307856}
   m_Layer: 7
   m_Name: Body (8)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1865,7 +1865,7 @@ GameObject:
   - component: {fileID: 650468103934694034}
   m_Layer: 7
   m_Name: Body (17)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2058,7 +2058,7 @@ GameObject:
   - component: {fileID: 1150230597810045109}
   m_Layer: 7
   m_Name: Body (9)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2251,7 +2251,7 @@ GameObject:
   - component: {fileID: 5636582763861955635}
   m_Layer: 7
   m_Name: Body (16)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2444,7 +2444,7 @@ GameObject:
   - component: {fileID: 6566116819744214660}
   m_Layer: 7
   m_Name: Body (2)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2637,7 +2637,7 @@ GameObject:
   - component: {fileID: 2694273250157099825}
   m_Layer: 7
   m_Name: Body (10)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2830,7 +2830,7 @@ GameObject:
   - component: {fileID: 6568759386654718786}
   m_Layer: 7
   m_Name: Body (20)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3025,7 +3025,7 @@ GameObject:
   - component: {fileID: 3011116205345766783}
   m_Layer: 7
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: SnakeHead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3187,6 +3187,7 @@ MonoBehaviour:
   attackSFX: {fileID: 8300000, guid: 4c326eca08ef52445b2ff0a252f8507a, type: 3}
   gameplayMusic: {fileID: 8300000, guid: b932ee86a769ae847ab85adb838637dd, type: 3}
   chaseMusic: {fileID: 8300000, guid: b92df9ddb3ad9ec4aa5e36b73b42c439, type: 3}
+  hitSFX: {fileID: 8300000, guid: 96e06894ec9dcb24d802e41a05e80217, type: 3}
   cols:
   - {fileID: 1737228407961377646}
   - {fileID: 8952807732637444804}
@@ -3211,6 +3212,10 @@ MonoBehaviour:
   - {fileID: 7834527199421567316}
   - {fileID: 2782892981214980554}
   - {fileID: 4680478091501008164}
+  vCam: {fileID: 0}
+  crySFX: {fileID: 8300000, guid: 61ee6a29a796dcc4da4158a5144485ef, type: 3}
+  head: {fileID: -1818020046, guid: a9676b51571338f4d9c8a027b81c28f3, type: 3}
+  musicDetector: {fileID: 1805344188357468370}
   isAttacking: 0
   isMouthOpen: 0
 --- !u!114 &8567666056738429307
@@ -3346,7 +3351,7 @@ GameObject:
   - component: {fileID: 8850558513754911227}
   m_Layer: 7
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3539,7 +3544,7 @@ GameObject:
   - component: {fileID: 8690799055802006977}
   m_Layer: 7
   m_Name: Body (6)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3732,7 +3737,7 @@ GameObject:
   - component: {fileID: 332566399378621747}
   m_Layer: 7
   m_Name: Body (5)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3925,7 +3930,7 @@ GameObject:
   - component: {fileID: 8309744181871769271}
   m_Layer: 7
   m_Name: Body (15)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4118,7 +4123,7 @@ GameObject:
   - component: {fileID: 587190074776840099}
   m_Layer: 7
   m_Name: Body (14)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4589,7 +4594,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  sfx: {fileID: 8300000, guid: 4c326eca08ef52445b2ff0a252f8507a, type: 3}
 --- !u!212 &7354697223736383699
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4703,7 +4707,7 @@ GameObject:
   - component: {fileID: 3970275340520007261}
   m_Layer: 7
   m_Name: Body (13)
-  m_TagString: Untagged
+  m_TagString: SnakeBody
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

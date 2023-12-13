@@ -15,6 +15,8 @@ public class Torch : LightSource
     [SerializeField] AnimatorOverrideController withTorch;
     [SerializeField] AnimatorOverrideController noTorch;
 
+    [SerializeField] GameObject lightCircle;
+
     Leader leader;
     float maxTorchLightRadius;
 
@@ -29,13 +31,17 @@ public class Torch : LightSource
         if(range > minRange)
         {
             animator.runtimeAnimatorController = withTorch;
+            lightCircle.SetActive(true);
             range -= decaySpeed * Time.deltaTime;
             leader.hud.UpdateTorchAmount(Mathf.CeilToInt((range - minRange) / (maxTorchLightRadius - minRange) * 100f));
         }
         else
+        {
+            lightCircle.SetActive(false);
             animator.runtimeAnimatorController = noTorch;
+        }
 
-        if(col.radius > 0f)
+        if (col.radius > 0f)
         {
             col.radius -= decaySpeed * Time.deltaTime;
         }

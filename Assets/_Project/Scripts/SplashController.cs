@@ -21,10 +21,7 @@ public class SplashController : MonoBehaviour
 
 #endif
 
-        ctrl.alpha = 0f;
-        ctrl.DOFade(1f, 0.5f);
-        ctrl.DOFade(0f, 0.5f).SetDelay(2f).OnComplete(() => Cisteto());
-        Application.targetFrameRate = 60;
+        Cisteto();
     }
 
     void Cisteto()

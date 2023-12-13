@@ -10,6 +10,8 @@ TagManager:
   - LightSource
   - HUD
   - SFX
+  - SnakeBody
+  - SnakeHead
   layers:
   - Default
   - TransparentFX

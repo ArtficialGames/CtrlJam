@@ -46,6 +46,8 @@ public class Torch : LightSource
         }
 
         mask.transform.localScale = Vector3.one * range;
+
+        UpdateLighting();
     }
 
     private void OnTriggerStay2D(Collider2D collision)

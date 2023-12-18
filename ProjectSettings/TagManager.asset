@@ -12,6 +12,7 @@ TagManager:
   - SFX
   - SnakeBody
   - SnakeHead
+  - MovableLightSource
   layers:
   - Default
   - TransparentFX

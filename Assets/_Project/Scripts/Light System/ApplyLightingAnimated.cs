@@ -22,8 +22,6 @@ public class ApplyLightingAnimated : MonoBehaviour
     {
         if (PixelLighting.Instance != null)
         {
-            lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
-
             if(GetComponent<Follower>().queue == null)
             {
                 if (lightLevel == 0)
@@ -48,6 +46,11 @@ public class ApplyLightingAnimated : MonoBehaviour
                     animator.runtimeAnimatorController = normal;
             }
         }
+    }
+
+    public void SetLightLevel(int level)
+    {
+        lightLevel = level;
     }
 
 }

@@ -7,36 +7,26 @@ using UnityEngine.Tilemaps;
 public class PixelLighting : MonoBehaviour
 {
     public static PixelLighting Instance;
-    public List<LightSource> lightSources = new List<LightSource>();
     public List<Tilemap> tilemaps;
 
     private void Awake()
     {
         Instance = this;
-        //InvokeRepeating("UpdateLightSources", 0f, 0.15f);
-        UpdateLightSources();
-    }
 
-    void UpdateLightSources()
-    {
-        lightSources = new List<LightSource>();
-
-        foreach (var item in GameObject.FindGameObjectsWithTag("LightSource"))
+        foreach (var tilemap in tilemaps)
         {
-            lightSources.Add(item.GetComponent<LightSource>());
+            tilemap.RefreshAllTiles();
         }
+
     }
 
-    public int GetTileLightLevel(Vector3Int location)
+    public int GetTileLightLevel(Vector3Int location, LightSource light)
     {
         int lightLevel = 0;
 
-        foreach (var light in lightSources)
+        if (Vector3.Distance(location, light.transform.position) < light.range)
         {
-            if (Vector3.Distance(location, light.transform.position) < light.range)
-            {
-                lightLevel = Mathf.CeilToInt(light.range) - Mathf.CeilToInt(Vector3.Distance(location, light.transform.position));
-            }
+            lightLevel = Mathf.FloorToInt(light.range) - Mathf.FloorToInt(Vector3.Distance(location, light.transform.position));
         }
 
         return lightLevel;

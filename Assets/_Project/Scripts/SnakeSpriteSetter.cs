@@ -83,8 +83,6 @@ public class SnakeSpriteSetter : MonoBehaviour
     {
         if (PixelLighting.Instance != null)
         {
-            lightLevel = PixelLighting.Instance.GetTileLightLevel(Vector3Int.RoundToInt(transform.position));
-
             if (lightLevel == 0)
                 spriteRenderer.enabled = false;
             else
@@ -97,6 +95,11 @@ public class SnakeSpriteSetter : MonoBehaviour
                     correctArray = 0;
             }
         }
+    }
+
+    public void SetLightLevel(int level)
+    {
+        lightLevel = level;
     }
 
     public void TurnOffLight()
